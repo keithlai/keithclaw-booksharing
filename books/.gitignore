@@ -1,6 +1,0 @@
-server-key.pem
-server-cert.pem
-_temp_*.json
-node_modules/
-!_temp_kids.json
-*.pfx
