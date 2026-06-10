@@ -1,0 +1,15 @@
+.openclaw/
+git-portable/
+node_modules/
+*.key
+*.pem
+*.pfx
+.env
+Microsoft/
+agents/
+output/
+spawn-agent.ps1
+_push_*.js
+_repo.json
+biz-books-overview.json
+books.json
