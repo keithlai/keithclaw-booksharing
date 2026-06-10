@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>🦞 龍蝦內視鏡 — Log Viewer</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0..200" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0f0f1a;--bg2:#1a1a2e;--card:#1e1e36;--fg:#e8e8f0;--fg2:#a0a0b8;--muted:#6c6c88;--border:#2a2a4a;--primary:#D0BCFF;--primary-container:#4A3060;--surface-container:#211F26;--surface-variant:#49454F;--r:12px;--rs:8px}
+body{background:var(--bg);color:var(--fg);font-family:'Roboto',sans-serif;min-height:100vh}
+.app-bar{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100}
+.app-bar .icon{font-size:28px}
+.app-bar h1{font-size:20px;font-weight:600;flex:1}
+.app-bar .badge{background:var(--card);padding:4px 12px;border-radius:20px;font-size:12px;border:1px solid var(--border);color:var(--fg2)}
+.main{max-width:1400px;margin:0 auto;padding:16px 24px}
+.tab-bar{display:flex;gap:4px;margin-bottom:16px;background:var(--bg2);border-radius:var(--r);padding:4px}
+.tab{flex:1;padding:10px;text-align:center;border:none;background:transparent;color:var(--fg2);cursor:pointer;border-radius:var(--rs);font-size:14px;font-weight:500;transition:all .2s}
+.tab.active{background:var(--primary-container);color:var(--primary)}
+.tab:hover{background:var(--surface-variant)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:16px}
+.card h2{font-size:16px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.controls{display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap;align-items:center}
+.controls select,.controls input{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rs);color:var(--fg);padding:8px 12px;font-size:13px;outline:none}
+.controls select:focus,.controls input:focus{border-color:var(--primary)}
+.controls button{background:var(--primary-container);color:var(--primary);border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:13px;font-weight:500;transition:all .2s}
+.controls button:hover{background:var(--primary);color:#000}
+.log-viewer{background:#0a0a14;border-radius:var(--rs);padding:12px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;max-height:70vh;overflow-y:auto;white-space:pre-wrap;word-break:break-all}
+.log-line{display:flex;gap:8px;padding:2px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.log-line .num{color:var(--muted);width:40px;flex-shrink:0;text-align:right;user-select:none}
+.log-line .msg{flex:1}
+.log-line:hover{background:rgba(255,255,255,0.03)}
+.file-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.file-card{padding:14px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--rs);cursor:pointer;transition:all .2s}
+.file-card:hover{border-color:var(--primary);background:var(--card)}
+.file-card .name{font-weight:500;font-size:14px;color:var(--primary)}
+.file-card .meta{font-size:12px;color:var(--muted);margin-top:4px}
+.cmd-box{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rs);padding:12px;margin-bottom:12px}
+.cmd-box .cmd{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--primary);margin-bottom:4px}
+.cmd-box .desc{font-size:13px;color:var(--fg2);margin-bottom:4px}
+.cmd-box .output{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);background:#0a0a14;padding:8px;border-radius:var(--rs);white-space:pre-wrap;margin-top:6px}
+.cmd-tag{display:inline-block;padding:2px 8px;border-radius:12px;font-size:11px;background:var(--surface-variant);color:var(--fg2);margin-right:4px}
+.cmd-tag.danger{background:rgba(242,184,181,0.2);color:#F2B8B5}
+.cmd-tag.warn{background:rgba(240,180,41,0.2);color:#F0B429}
+.empty{text-align:center;padding:40px;color:var(--muted);font-size:14px}
+.spinner{display:inline-block;width:20px;height:20px;border:2px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:600px){.main{padding:12px}.app-bar{padding:0 12px}.tab{font-size:12px;padding:8px}.file-list{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="app-bar">
+  <span class="icon"><span class="material-symbols-rounded">visibility</span></span>
+  <h1>🦞 龍蝦內視鏡</h1>
+  <span class="badge" id="statusBadge">● 連線中</span>
+  <span class="badge">v1.0.0</span>
+</div>
+
+<div class="main">
+  <div class="tab-bar">
+    <button class="tab active" onclick="switchTab('logs')">📋 Logs</button>
+    <button class="tab" onclick="switchTab('admin')">⚙️ Admin</button>
+    <button class="tab" onclick="switchTab('workspace')">📁 Workspace</button>
+  </div>
+
+  <!-- Logs Tab -->
+  <div id="tab-logs" class="tab-content active">
+    <div class="card">
+      <h2><span class="material-symbols-rounded">description</span> OpenClaw Logs</h2>
+      <div class="controls">
+        <select id="logSource">
+          <option value="openclaw">OpenClaw Logs</option>
+          <option value="app">App Logs</option>
+        </select>
+        <span id="logFileCount" style="color:var(--muted);font-size:13px"></span>
+      </div>
+      <div class="file-list" id="logFileList"><div class="empty">Loading...</div></div>
+    </div>
+    <div class="card" id="logViewerCard" style="display:none">
+      <div class="controls">
+        <span id="logFileName" style="font-weight:600;font-size:14px"></span>
+        <div style="flex:1"></div>
+        <button onclick="refreshLog()">🔄 Refresh</button>
+        <select id="logLines" onchange="refreshLog()">
+          <option value="50">50 lines</option>
+          <option value="200" selected>200 lines</option>
+          <option value="500">500 lines</option>
+          <option value="1000">1000 lines</option>
+        </select>
+      </div>
+      <div class="log-viewer" id="logContent"><div class="empty"><div class="spinner"></div> Loading...</div></div>
+    </div>
+  </div>
+
+  <!-- Admin Tab -->
+  <div id="tab-admin" class="tab-content">
+    <div class="card">
+      <h2><span class="material-symbols-rounded">pod</span> Podman Status</h2>
+      <div class="cmd-box" id="podmanStatus"><div class="spinner"></div> Loading...</div>
+    </div>
+    <div class="card" id="podmanLogsCard">
+      <h2><span class="material-symbols-rounded">terminal</span> Container Logs</h2>
+      <div class="controls">
+        <button onclick="refreshPodmanLogs()">🔄 Refresh</button>
+      </div>
+      <div class="log-viewer" id="podmanLogs" style="max-height:300px"><div class="empty">Click refresh to load</div></div>
+    </div>
+    <div class="card">
+      <h2><span class="material-symbols-rounded">menu_book</span> Operations Manual</h2>
+      <div id="opsManual"></div>
+    </div>
+  </div>
+
+  <!-- Workspace Tab -->
+  <div id="tab-workspace" class="tab-content">
+    <div class="card">
+      <h2><span class="material-symbols-rounded">folder</span> Workspace Browser</h2>
+      <div class="controls">
+        <span id="wsPath" style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted)">/workspace/</span>
+      </div>
+      <div id="wsContent"><div class="spinner"></div> Loading...</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== Tab Switching =====
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelector(`.tab[onclick*="'${name}'"]`).classList.add('active');
+  document.getElementById('tab-' + name).classList.add('active');
+  if (name === 'logs') loadLogFileList();
+  if (name === 'admin') { loadPodmanStatus(); loadOpsManual(); }
+  if (name === 'workspace') loadWorkspace();
+}
+
+// ===== Logs =====
+let currentLogFile = null;
+
+async function api(path) {
+  const r = await fetch(path);
+  return r.json();
+}
+
+async function loadLogFileList() {
+  const source = document.getElementById('logSource').value;
+  const data = await api('/api/logs?dir=' + source);
+  const list = document.getElementById('logFileList');
+  document.getElementById('logFileCount').textContent = data.files.length + ' files';
+  if (data.files.length === 0) {
+    list.innerHTML = '<div class="empty">No log files found</div>';
+    return;
+  }
+  list.innerHTML = data.files.map(f =>
+    `<div class="file-card" onclick="openLog('${f.name}')">
+      <div class="name">${f.name}</div>
+      <div class="meta">${(f.size/1024).toFixed(1)} KB · ${new Date(f.mtime).toLocaleString('zh-HK')}</div>
+    </div>`
+  ).join('');
+}
+
+async function openLog(filename) {
+  currentLogFile = filename;
+  document.getElementById('logFileName').textContent = '📄 ' + filename;
+  document.getElementById('logViewerCard').style.display = 'block';
+  await refreshLog();
+}
+
+async function refreshLog() {
+  if (!currentLogFile) return;
+  const lines = document.getElementById('logLines').value;
+  const data = await api(`/api/logs/read?file=${currentLogFile}&lines=${lines}`);
+  document.getElementById('logContent').innerHTML = data.lines.map((l, i) =>
+    `<div class="log-line"><span class="num">${data.startLine + i}</span><span class="msg">${escapeHtml(l)}</span></div>`
+  ).join('') || '<div class="empty">Empty file</div>';
+}
+
+// ===== Admin =====
+async function loadPodmanStatus() {
+  const data = await api('/api/podman/ps');
+  document.getElementById('podmanStatus').innerHTML =
+    `<div class="output">${escapeHtml(data.output || 'No containers running')}</div>`;
+}
+
+async function refreshPodmanLogs() {
+  const data = await api('/api/podman/logs?tail=100');
+  document.getElementById('podmanLogs').innerHTML = escapeHtml(data.output || 'No logs');
+}
+
+function loadOpsManual() {
+  const cmds = [
+    { cmd: 'podman ps -a', desc: 'List all running/stopped containers', tag: 'info' },
+    { cmd: 'podman logs -f <container>', desc: 'Follow container logs in real-time', tag: 'info' },
+    { cmd: 'podman exec -it <container> sh', desc: 'SSH into a running container', tag: 'danger' },
+    { cmd: 'podman restart <container>', desc: 'Restart a container', tag: 'warn' },
+    { cmd: 'podman stop <container> && podman rm <container>', desc: 'Stop and remove a container', tag: 'danger' },
+    { cmd: 'podman build -t <name> .', desc: 'Build a container image from Dockerfile', tag: 'info' },
+    { cmd: 'podman run -d --name <name> -p 3000:3000 <image>', desc: 'Run a container in background', tag: 'info' },
+    { cmd: 'podman volume ls', desc: 'List all Podman volumes', tag: 'info' },
+    { cmd: 'podman volume inspect <volume>', desc: 'Inspect volume details', tag: 'info' },
+    { cmd: 'tasklist /FI "IMAGENAME eq node.exe"', desc: 'Check running Node.js processes (Windows)', tag: 'warn' },
+    { cmd: 'netstat -ano | findstr :443', desc: 'Check what is listening on port 443', tag: 'warn' },
+    { cmd: 'git log --oneline', desc: 'View recent commit history', tag: 'info' },
+  ];
+  document.getElementById('opsManual').innerHTML = cmds.map(c =>
+    `<div class="cmd-box">
+      <span class="cmd-tag ${c.tag}">${c.tag}</span>
+      <div class="cmd">${escapeHtml(c.cmd)}</div>
+      <div class="desc">${escapeHtml(c.desc)}</div>
+    </div>`
+  ).join('');
+}
+
+// ===== Workspace =====
+async function loadWorkspace(dir) {
+  const data = await api('/api/workspace/list?dir=' + (dir || ''));
+  document.getElementById('wsPath').textContent = '/workspace/' + (dir || '');
+  document.getElementById('wsContent').innerHTML =
+    '<div class="file-list">' +
+    data.items.filter(i => i.type === 'dir').map(i =>
+      `<div class="file-card" onclick="loadWorkspace('${dir ? dir + '/' : ''}${i.name}')">
+        <div class="name">📁 ${i.name}</div>
+      </div>`
+    ).join('') +
+    data.items.filter(i => i.type === 'file').map(i =>
+      `<div class="file-card">
+        <div class="name">📄 ${i.name}</div>
+        <div class="meta">${(i.size/1024).toFixed(1)} KB</div>
+      </div>`
+    ).join('') +
+    (data.items.length === 0 ? '<div class="empty">Empty directory</div>' : '') +
+    '</div>';
+}
+
+// ===== Utils =====
+function escapeHtml(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+// ===== Init =====
+loadLogFileList();
+loadOpsManual();
+</script>
+</body>
+</html>

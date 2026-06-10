@@ -1,0 +1,10 @@
+{
+  "name": "keithclaw-logviewer",
+  "version": "1.0.0",
+  "description": "龍蝦內視鏡 — OpenClaw Log Viewer",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.21.0",
+    "chokidar": "^4.0.0"
+  }
+}
