@@ -1077,15 +1077,6 @@ function closeNewsModal() {
   document.getElementById('newsModal').classList.remove('open');
 }
 
-// Override init to check which mode was active
-var origRender = render;
-render = function() {
-  if (currentMode === 'books') {
-    document.getElementById('burgerBtn').style.display = 'flex';
-    origRender();
-  }
-};
-
 // ======= Render =======
 function render(){
   var list=filterBooks();
