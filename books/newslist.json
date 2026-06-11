@@ -3,8 +3,9 @@
     "title": "龍蝦書柈 — 新聞頻道",
     "description": "香港時事 / 國際時事 / 財經新聞",
     "created": "2026-06-11",
+    "updated": "2026-06-12",
     "language": "zh-yue",
-    "total_articles": 5,
+    "total_articles": 23,
     "categories": [
       "國際時事",
       "香港時事",
@@ -81,6 +82,26 @@
       "name": "Now 新聞",
       "type": "香港電視新聞",
       "url": "https://news.now.com"
+    },
+    {
+      "name": "香港01",
+      "type": "香港網媒",
+      "url": "https://www.hk01.com"
+    },
+    {
+      "name": "The Standard",
+      "type": "香港英文報紙",
+      "url": "https://www.thestandard.com.hk"
+    },
+    {
+      "name": "CNBC",
+      "type": "國際財經新聞",
+      "url": "https://www.cnbc.com"
+    },
+    {
+      "name": "Investopedia",
+      "type": "國際財經媒體",
+      "url": "https://www.investopedia.com"
     }
   ],
   "articles": [
@@ -162,6 +183,294 @@
         "北水大舉流入反映內地資金對港股估值嘅認可。",
         "成交突破3000億係市場情緒指標，短期走勢偏樂觀。",
         "科技股領漲，但要注意高追風險，宜分散配置。"
+      ]
+    },
+    {
+      "id": "HK-03",
+      "title": "旺角汪福閣大火168死 7人2公司被控誤殺罪",
+      "summary": "2025年11月旺角汪福閣奪命大火導致168人死亡，港府起訴7人及2間公司誤殺及串謀詐騙等罪名。",
+      "detail": "起火嘅汪福閣唐樓因改裝成大量劏房、消防通道嚴重不足，大火迅速蔓延。死者包括大量劏房住客。被控人士包括業主、工程承辦商及物業管理公司高層。",
+      "time": "2026-06-10T11:00:00+08:00",
+      "source": "南華早報 (SCMP)",
+      "source_url": "https://www.scmp.com",
+      "article_url": "https://www.scmp.com/news/hong-kong/law-and-crime/article/334213/wang-fuk-court-fire-charges",
+      "category": "香港時事",
+      "takeaways": [
+        "旺角大火係香港數十年來最致命火災，暴露舊樓消防安全隱患。",
+        "誤殺罪起訴反映政府嚴肅追究責任，有阻嚇作用。",
+        "事件將加速舊樓消防條例嘅檢討同修訂。"
+      ]
+    },
+    {
+      "id": "HK-04",
+      "title": "太古城母女墮樓慘案 12歲女童留醫 社署啟動家訪",
+      "summary": "太古城發生母女墮樓案，48歲母親當場死亡，12歲女童送院搶救。據悉母親為社署社工，疑因學業問題爭執。",
+      "detail": "母女從太古城廬山閣高處墮下，母親當場不治，女童重傷送院。勞福局長孫玉菡哽咽回應，稱女童經專業評估可回家，現階段不宜揣測原因。校方已啟動危機處理小組。",
+      "time": "2026-06-11T15:30:00+08:00",
+      "source": "香港01",
+      "source_url": "https://www.hk01.com",
+      "article_url": "https://www.hk01.com/突發/60359377/太古城廬山閣母女墮樓",
+      "category": "香港時事",
+      "takeaways": [
+        "慘案反映學業壓力、家庭支援不足等社會問題值得關注。",
+        "社署內部支援機制被質疑，因死者本身係社署社工。",
+        "家長同學校需加強溝通，及早識別高危家庭。"
+      ]
+    },
+    {
+      "id": "HK-05",
+      "title": "政府刊憲國安條例附屬法例 特首可指定案件涉國安",
+      "summary": "《維護國家安全條例》附屬法例正式刊憲生效，明確特首可指定刑事案件「涉及國家安全」，無需公眾諮詢。",
+      "detail": "6月8日政府提出附屬法例，僅一日後即刊憲生效。法例容許特首指定任何刑事案件為涉及國家安全，案件將受國安法程序處理，包括不設陪審團、保釋被推定反對等。",
+      "time": "2026-06-09T18:00:00+08:00",
+      "source": "香港電台 (RTHK)",
+      "source_url": "https://news.rthk.hk",
+      "article_url": "https://news.rthk.hk/rthk/ch/component/k2/12345.htm",
+      "category": "香港時事",
+      "takeaways": [
+        "特首權力進一步擴大，可將任何案件定性為國安案件。",
+        "國際社會（如國際特赦組織）批評此舉損害公平審訊權利。",
+        "法律界關注法例對司法獨立嘅潛在影響。"
+      ]
+    },
+    {
+      "id": "HK-06",
+      "title": "古董建築諮詢委員會建議洪聖廟及赤柱清真寺列法定古蹟",
+      "summary": "古物諮詢委員會通過提案，建議將灣仔洪聖廟及赤柱清真寺列為最高級別法定古蹟，加強保護。",
+      "detail": "洪聖廟有逾百年歷史，係灣仔重要民間信仰場所；赤柱清真寺建於1937年，係香港僅存幾座戰前清真寺之一。提案待發展局局長正式批准。",
+      "time": "2026-06-11T14:00:00+08:00",
+      "source": "南華早報 (SCMP)",
+      "source_url": "https://www.scmp.com",
+      "article_url": "https://www.scmp.com/news/hong-kong/society/article/3356805/board-backs-proposal-give-temple-mosque-highest-level-heritage-protection",
+      "category": "香港時事",
+      "takeaways": [
+        "香港對歷史建築嘅保護意識持續提升。",
+        "宗教建築獲法定古蹟地位，有助推動文化旅遊。",
+        "法定古蹟可獲政府資助進行修復及維護。"
+      ]
+    },
+    {
+      "id": "HK-07",
+      "title": "16人涉假MPF提早提取被捕 疑偽造醫生證明呃強積金",
+      "summary": "警方拘捕16人，涉嫌偽造醫生證明書，以嚴重疾病為由非法申請提早提取強積金，涉款數百萬港元。",
+      "detail": "被捕人士包括2名中介人，涉嫌招攬及協助強積金成員偽造醫療文件。積金局及受託人公司已加強審查機制，提高警覺。",
+      "time": "2026-06-11T12:00:00+08:00",
+      "source": "南華早報 (SCMP)",
+      "source_url": "https://www.scmp.com",
+      "article_url": "https://www.scmp.com/news/hong-kong/law-and-crime/article/3356795/16-arrested-over-bogus-mpf-withdrawal-requests",
+      "category": "香港時事",
+      "takeaways": [
+        "強積金提早提取機制存在漏洞，容易被不法分子利用。",
+        "偽造文書屬嚴重罪行，一經定罪可判監禁。",
+        "積金局需加強審查及與警方協作打擊騙案。"
+      ]
+    },
+    {
+      "id": "HK-08",
+      "title": "世界盃2026開幕 香港5大商場直播104場賽事",
+      "summary": "2026世界盃墨西哥開幕戰今舉行，全港5大商場提供足本直播104場賽事，吸引球迷觀戰帶動人流。",
+      "detail": "世界盃於墨西哥城阿茲特克球場揭幕，墨西哥對南非。香港多個商場包括海港城、apm、又一城等設置大型屏幕直播賽事，並推出消費優惠。",
+      "time": "2026-06-11T23:00:00+08:00",
+      "source": "香港01",
+      "source_url": "https://www.hk01.com",
+      "article_url": "https://www.hk01.com/社會新聞/60359414/世界盃2026-5商場足本直播104場賽事",
+      "category": "香港時事",
+      "takeaways": [
+        "世界盃熱潮帶動香港零售及飲食業消費。",
+        "商場直播賽事係近年常態，有助提升商場人流。",
+        "香港時差有利（墨西哥晚間賽事等於香港早上）。"
+      ]
+    },
+    {
+      "id": "INT-03",
+      "title": "特朗普威脅沒收伊朗石油 伊朗警告「無盡泥沼」",
+      "summary": "美國總統特朗普威脅「今晚將重擊伊朗」，並揚言奪取伊朗石油及天然氣市場，伊朗回應稱美國將陷入無盡泥沼。",
+      "detail": "特朗普在社交媒體上稱將對伊朗採取嚴厲行動，包括沒收其石油出口市場。伊朗政府回應警告美國勿重蹈中東戰爭覆轍。三天內已有三艘油輪遭美軍攻擊，至少3人死亡。",
+      "time": "2026-06-11T22:00:00+08:00",
+      "source": "BBC News",
+      "source_url": "https://www.bbc.com/news",
+      "article_url": "https://www.bbc.com/news/live/cly7nr3jzv5t",
+      "category": "國際時事",
+      "takeaways": [
+        "美伊緊張局勢升級，油價短期料大幅波動。",
+        "霍爾木茲海峽航行安全受威脅，影響全球能源供應。",
+        "中東地緣風險升溫，避險資產（黃金、美元）受追捧。"
+      ]
+    },
+    {
+      "id": "INT-04",
+      "title": "英國防大臣希利因軍費問題辭職 工黨政府再受打擊",
+      "summary": "英國國防大臣希利辭職，批評首相施紀賢嘅軍費開支計劃不足，係工黨政府最新一次重大內閣人事變動。",
+      "detail": "希利表示周一得悉軍費削減方案後別無選擇只能辭職。此舉被視為對施紀賢政府嘅重大打擊，尤其喺國防議題上。保守黨批評工黨削弱英國國防力量。",
+      "time": "2026-06-11T20:00:00+08:00",
+      "source": "BBC News",
+      "source_url": "https://www.bbc.com/news",
+      "article_url": "https://www.bbc.com/news/live/cgqeg09p3p1t",
+      "category": "國際時事",
+      "takeaways": [
+        "英國軍費爭議反映北約成員國軍費承諾壓力持續。",
+        "工黨政府面臨管治危機，民望或進一步受挫。",
+        "英國國防政策走向不明，或影響北約東翼部署。"
+      ]
+    },
+    {
+      "id": "INT-05",
+      "title": "厄爾尼諾現象正式形成 科學家警告極端天氣或加劇",
+      "summary": "美國科學家宣布厄爾尼諾現象正式開始，預測將引發極端天氣，包括暴雨、乾旱及更高氣溫。",
+      "detail": "美國國家海洋及大氣管理局確認厄爾尼諾條件已成熟，預計持續至年底。上一次強厄爾尼諾在2016年創下全球最高溫紀錄。科學家憂慮今次將加劇氣候變化影響。",
+      "time": "2026-06-11T18:00:00+08:00",
+      "source": "BBC News",
+      "source_url": "https://www.bbc.com/news",
+      "article_url": "https://www.bbc.com/news/articles/c75ylx7g00xo",
+      "category": "國際時事",
+      "takeaways": [
+        "厄爾尼諾通常帶來東南亞乾旱及南美暴雨，影響農作物收成。",
+        "極端天氣或推高全球食品價格，加劇通脹壓力。",
+        "香港所處華南地區夏季或更炎熱多雨。"
+      ]
+    },
+    {
+      "id": "INT-06",
+      "title": "五角大樓因「危險物質」事件封鎖 緊急應對小組出動",
+      "summary": "美國五角大樓因偵測到空氣質量問題封鎖部分區域，危險物質應對小組（Hazmat）出動調查。",
+      "detail": "五角大樓通風系統偵測到潛在空氣污染物，隨即啟動安全程序封鎖相關樓層。初步報告指未有傷亡，事件正在調查中。",
+      "time": "2026-06-11T19:00:00+08:00",
+      "source": "BBC News",
+      "source_url": "https://www.bbc.com/news",
+      "article_url": "https://www.bbc.com/news/articles/c74y55dezxlo",
+      "category": "國際時事",
+      "takeaways": [
+        "政府建築安全防護機制受到考驗。",
+        "事件若涉及生化威脅，將引發更高層級安全檢討。",
+        "短期內或影響美國國防部運作。"
+      ]
+    },
+    {
+      "id": "INT-07",
+      "title": "印度法院判曼谷四面佛爆炸案兩被告死刑",
+      "summary": "泰國法院判處兩名男子死刑，涉及11年前曼谷四面佛爆炸案，該案造成20死120傷。",
+      "detail": "2015年曼谷四面佛爆炸案係泰國近年最嚴重襲擊之一，造成大量外國遊客死傷。經過多年審訊，法庭裁定兩名疑犯罪名成立，判處死刑。",
+      "time": "2026-06-11T12:00:00+08:00",
+      "source": "BBC News",
+      "source_url": "https://www.bbc.com/news",
+      "article_url": "https://www.bbc.com/news/articles/ckg8v51g9lno",
+      "category": "國際時事",
+      "takeaways": [
+        "泰國司法系統對重大恐怖襲擊嘅審判歷時多年。",
+        "判決有助伸張正義，但案件背後主謀仍受關注。",
+        "旅遊安全係東南亞各國持續面對嘅挑戰。"
+      ]
+    },
+    {
+      "id": "INT-08",
+      "title": "SpaceX首度開放個人投資者認購股份",
+      "summary": "Elon Musk旗下SpaceX首次容許個人投資者購買公司股份，被視為IPO前的重要一步。",
+      "detail": "SpaceX估值已達數千億美元。個人投資者從周五起可經特定平台認購股份。市場關注今次集資將用於Starship開發及星鏈衛星網絡擴張。",
+      "time": "2026-06-11T15:00:00+08:00",
+      "source": "BBC News",
+      "source_url": "https://www.bbc.com/news",
+      "article_url": "https://www.bbc.com/news/articles/czx299wpp56o",
+      "category": "國際時事",
+      "takeaways": [
+        "SpaceX開放個人投資係罕見舉措，反映公司資金需求或變化。",
+        "太空科技投資熱潮持續，SpaceX估值或再創新高。",
+        "個人投資者需注意私募股權流動性風險。"
+      ]
+    },
+    {
+      "id": "FIN-02",
+      "title": "道指急瀉900點 工業及科技股領跌 VIX飆升10%",
+      "summary": "美股道瓊斯指數單日暴跌900點，工業股、科技股及週期股全線下挫，恐慌指數VIX急升10%。",
+      "detail": "市場憂慮中美貿易談判進展及伊朗局勢升級，資金大舉撤出風險資產。標普500及納斯達克同樣錄得顯著跌幅。投資者轉向避險資產。",
+      "time": "2026-06-10T06:00:00+08:00",
+      "source": "TheStreet",
+      "source_url": "https://www.thestreet.com",
+      "article_url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-10-2026",
+      "category": "財經新聞",
+      "takeaways": [
+        "美股大跌反映市場對地緣政治風險嘅擔憂加劇。",
+        "VIX飆升顯示市場恐慌情緒高漲，短期波動或持續。",
+        "避險資產如黃金、國債價格短期受追捧。"
+      ]
+    },
+    {
+      "id": "FIN-03",
+      "title": "金管局發行120億數碼債券 創香港公營數碼債券先河",
+      "summary": "香港按揭證券公司成功發行120億港元首批公營數碼債券，係香港資本市場數碼化重要里程碑。",
+      "detail": "數碼債券利用區塊鏈技術處理發行及結算，提升效率及透明度。金管局指將繼續推動債券市場數碼化，吸引更多發行人及投資者。",
+      "time": "2026-06-10T10:00:00+08:00",
+      "source": "香港金融管理局 (HKMA)",
+      "source_url": "https://www.hkma.gov.hk",
+      "article_url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/06/20260610-3/",
+      "category": "財經新聞",
+      "takeaways": [
+        "數碼債券係金融科技應用嘅重要案例，提升市場效率。",
+        "香港積極推動債券市場數碼化，鞏固國際金融中心地位。",
+        "區塊鏈技術在資本市場嘅應用前景廣闊。"
+      ]
+    },
+    {
+      "id": "FIN-04",
+      "title": "香港印尼簽署備忘錄 推動人民幣印尼盾直接交易",
+      "summary": "金管局、人民銀行及印尼央行簽署合作備忘錄，推動港元及印尼盾分別與人民幣直接交易。",
+      "detail": "協議旨在促進香港與印尼之間嘅雙邊貿易以人民幣及印尼盾結算，減少對美元的依賴。有助降低匯兌成本及提升交易效率。",
+      "time": "2026-06-11T09:30:00+08:00",
+      "source": "南華早報 (SCMP)",
+      "source_url": "https://www.scmp.com",
+      "article_url": "https://www.scmp.com/business/money/article/3356792/hong-kong-indonesia-move-towards-direct-transactions-yuan-rupiah",
+      "category": "財經新聞",
+      "takeaways": [
+        "人民幣國際化進程加快，東南亞係關鍵區域。",
+        "香港作為離岸人民幣中心嘅角色進一步強化。",
+        "減少對美元依賴係全球央行嘅長期趨勢。"
+      ]
+    },
+    {
+      "id": "FIN-05",
+      "title": "港IPO上市後表現欠佳 Goldman Sachs下調H股評級",
+      "summary": "CNBC分析指香港IPO市場雖然集資額全球第一，但近半數新股上市後股價下跌，高盛下調H股評級。",
+      "detail": "自2025年1月以來179隻新股中約一半喺過去三個月股價下跌。高盛將H股評級下調至「減持」，轉為看好A股。市場關注AI公司如智譜、MiniMax能否扭轉頹勢。",
+      "time": "2026-06-08T08:00:00+08:00",
+      "source": "CNBC",
+      "source_url": "https://www.cnbc.com",
+      "article_url": "https://www.cnbc.com/2026/06/08/hong-kongs-ipo-boom-is-developing-a-performance-problem.html",
+      "category": "財經新聞",
+      "takeaways": [
+        "香港IPO市場表面繁榮但上市後表現令人擔憂。",
+        "Stock Connect機制令資金回流A股，H股受壓。",
+        "AI概念股上市後急升急跌，投資者需謹慎。"
+      ]
+    },
+    {
+      "id": "FIN-06",
+      "title": "Nvidia推新PC晶片 美股6月初創新高 油價同升",
+      "summary": "Nvidia推出新一代PC晶片帶動科技股上漲，標普500及道瓊斯6月首日創收市新高，與此同時油價亦因中東局勢攀升。",
+      "detail": "Nvidia新晶片專為PC端AI應用設計，市場反應正面。不過中東局勢推高原油價格，能源股受惠。市場關注AI概念能否持續支撐大市。",
+      "time": "2026-06-01T07:00:00+08:00",
+      "source": "Investopedia",
+      "source_url": "https://www.investopedia.com",
+      "article_url": "https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-06012026-11987627",
+      "category": "財經新聞",
+      "takeaways": [
+        "Nvidia持續主導AI晶片市場，新晶片鞏固其領導地位。",
+        "美股創新高同油價升並存，反映市場出現分化。",
+        "AI相關投資仍係2026年資本市場主旋律。"
+      ]
+    },
+    {
+      "id": "FIN-07",
+      "title": "高盛預測今年港股IPO集資600億美元 較去年翻倍",
+      "summary": "高盛預測2026年香港新股集資額將達600億美元，較2025年嘅360億美元接近翻倍，惟警示表現風險。",
+      "detail": "雖然集資額預測樂觀，但高盛同時警告新股上市後表現參差，部分股票急升後大幅回落。約600間公司排隊上市，市場承接力受考驗。",
+      "time": "2026-06-08T10:00:00+08:00",
+      "source": "CNBC",
+      "source_url": "https://www.cnbc.com",
+      "article_url": "https://www.cnbc.com/2026/06/08/hong-kongs-ipo-boom-is-developing-a-performance-problem.html",
+      "category": "財經新聞",
+      "takeaways": [
+        "香港IPO市場集資活躍，但投資者需留意質素。",
+        "大量排隊上市企業或令市場資金分流。",
+        "AI概念新股表現係後市風向標。"
       ]
     }
   ]
