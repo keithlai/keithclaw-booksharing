@@ -129,10 +129,10 @@ const server = https.createServer({ pfx, passphrase: PFX_PASS }, (req, res) => {
   if (pathname === '/api/news/list') {
     try {
       const data = JSON.parse(fs.readFileSync(NEWS_JSON, 'utf8'));
-      const now = new Date().toISOString();
+      var autoTime = new Date().toISOString();
       const list = data.articles.map(a => ({
         id: a.id, title: a.title, summary: a.summary,
-        source: a.source, time: a.time || now, cat: a.category,
+        source: a.source, time: a.time || autoTime, cat: a.category,
         source_url: a.source_url, article_url: a.article_url
       }));
       var now = new Date();
