@@ -706,7 +706,7 @@ body{
 <div class="burger-menu" id="burgerMenu">
   <div class="menu-header">Navigation</div>
   <button class="menu-item" data-mode="books" onclick="switchMode('books')">
-    <span class="menu-icon">&#x1F4DA;</span> Book Sharing
+    <span class="menu-icon">&#x1F4DA;</span> 好書分享
   </button>
   <button class="menu-item active" data-mode="news" onclick="switchMode('news')">
     <span class="menu-icon">&#x1F4F0;</span> 新聞頻道
@@ -724,7 +724,7 @@ body{
   <div class="leading-icon" aria-hidden="true">
     <span class="material-symbols-rounded">menu_book</span>
   </div>
-  <div class="headline">Keith 書單</div>
+  <div class="headline" id="headlineTitle">新聞頻道</div>
   <div class="trailing-area">
     <span class="m3-badge">
       <span class="material-symbols-rounded">library_books</span>
@@ -979,6 +979,7 @@ function switchMode(mode) {
   document.querySelector('.menu-item[data-mode="' + mode + '"]').classList.add('active');
   document.querySelectorAll('.mode-section').forEach(function(s) { s.classList.remove('active'); });
   document.getElementById('mode' + mode.charAt(0).toUpperCase() + mode.slice(1)).classList.add('active');
+  document.getElementById('headlineTitle').textContent = mode === 'news' ? '新聞頻道' : '好書分享';
   closeBurger();
   if (mode === 'news') loadNews();
 }
@@ -1168,7 +1169,8 @@ function render(){
 // ======= Init =======
 buildTabs();
 render();
-if (currentMode === 'news') loadNews();
+document.getElementById('headlineTitle').textContent = currentMode === 'news' ? '新聞頻道' : '好書分享';
+  if (currentMode === 'news') loadNews();
 </script>
 
 <!-- ======= M3 Modal Dialog ======= -->
