@@ -788,7 +788,7 @@ function updateFooter() {
   var n = new Date();
   var ver = "v1." + n.getFullYear().toString().slice(-2) + "." + String(n.getMonth()+1).padStart(2,"0") + "." + String(n.getDate()).padStart(2,"0");
   var lastUpd = n.getFullYear() + "/" + String(n.getMonth()+1).padStart(2,"0") + "/" + String(n.getDate()).padStart(2,"0") + " " + String(n.getHours()).padStart(2,"0") + ":" + String(n.getMinutes()).padStart(2,"0") + ":" + String(n.getSeconds()).padStart(2,"0");
-  f.innerHTML = "<span>最新更新： " + lastUpd + "</span><span> " + ver + · Material Design 3</span>";
+  f.innerHTML = "<span>最新更新： " + lastUpd + "</span><span> " + ver + " · Material Design 3</span>";
 }
 updateFooter();
 
