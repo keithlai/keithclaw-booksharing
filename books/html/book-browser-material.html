@@ -778,12 +778,20 @@ body{
 </main>
 
 <!-- ======= Footer ======= -->
-<footer class="footer" role="contentinfo">
-  <span>最後更新：10/06/2026 16:23:02</span>
-  <span>v3.0.0 · Material Design 3</span>
-</footer>
+<footer class="footer" role="contentinfo" id="siteFooter"></footer>
 
 <script>
+// Dynamic footer
+function updateFooter() {
+  var f = document.getElementById("siteFooter");
+  if (!f) return;
+  var n = new Date();
+  var ver = "v1." + n.getFullYear().toString().slice(-2) + "." + String(n.getMonth()+1).padStart(2,"0") + "." + String(n.getDate()).padStart(2,"0");
+  var lastUpd = n.getFullYear() + "/" + String(n.getMonth()+1).padStart(2,"0") + "/" + String(n.getDate()).padStart(2,"0") + " " + String(n.getHours()).padStart(2,"0") + ":" + String(n.getMinutes()).padStart(2,"0") + ":" + String(n.getSeconds()).padStart(2,"0");
+  f.innerHTML = "<span>最新更新： " + lastUpd + "</span><span> " + ver + · Material Design 3</span>";
+}
+updateFooter();
+
 // ======= Data =======
 var BOOKS=[];
 var booksLoading=true;
