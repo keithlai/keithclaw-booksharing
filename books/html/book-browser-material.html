@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title>💰 Keith書單 — Material You</title>
+
+<!-- Material Symbols & Fonts (Google CDN) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0..200" rel="stylesheet" />
+
+<style>
+/* ======= Material Design 3 Theme Tokens (Dynamic Colors) ======= */
+:root {
+  /* Primary palette */
+  --md-sys-color-primary: #6750A4;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #EADDFF;
+  --md-sys-color-on-primary-container: #21005D;
+
+  /* Secondary palette */
+  --md-sys-color-secondary: #625B71;
+  --md-sys-color-on-secondary: #FFFFFF;
+  --md-sys-color-secondary-container: #E8DEF8;
+  --md-sys-color-on-secondary-container: #1D192B;
+
+  /* Tertiary palette */
+  --md-sys-color-tertiary: #7D5260;
+  --md-sys-color-on-tertiary: #FFFFFF;
+  --md-sys-color-tertiary-container: #FFD8E4;
+  --md-sys-color-on-tertiary-container: #31111D;
+
+  /* Error */
+  --md-sys-color-error: #B3261E;
+  --md-sys-color-on-error: #FFFFFF;
+  --md-sys-color-error-container: #F9DEDC;
+  --md-sys-color-on-error-container: #410E0B;
+
+  /* Surface & Background */
+  --md-sys-color-background: #FFFBFE;
+  --md-sys-color-on-background: #1C1B1F;
+  --md-sys-color-surface: #FFFBFE;
+  --md-sys-color-on-surface: #1C1B1F;
+  --md-sys-color-surface-variant: #E7E0EC;
+  --md-sys-color-on-surface-variant: #49454F;
+
+  /* Outline */
+  --md-sys-color-outline: #79747E;
+  --md-sys-color-outline-variant: #CAC4D0;
+
+  /* Shadows */
+  --md-sys-elevation-level0: 0 0 0 0 transparent;
+  --md-sys-elevation-level1: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.08);
+  --md-sys-elevation-level2: 0 2px 6px rgba(0,0,0,.14), 0 1px 3px rgba(0,0,0,.1);
+  --md-sys-elevation-level3: 0 4px 12px rgba(0,0,0,.16), 0 2px 5px rgba(0,0,0,.1);
+  --md-sys-elevation-level4: 0 6px 20px rgba(0,0,0,.18), 0 3px 7px rgba(0,0,0,.12);
+
+  /* Radius */
+  --md-sys-shape-extra-small: 4px;
+  --md-sys-shape-small: 8px;
+  --md-sys-shape-medium: 12px;
+  --md-sys-shape-large: 16px;
+  --md-sys-shape-extra-large: 28px;
+  --md-sys-shape-full: 9999px;
+
+  /* Motion */
+  --md-sys-motion-easing-emphasized: cubic-bezier(.2,0,0,1);
+  --md-sys-motion-duration-short: 150ms;
+  --md-sys-motion-duration-medium: 300ms;
+  --md-sys-motion-duration-long: 400ms;
+
+  /* Container / sizing */
+  --top-bar-height: 64px;
+  --content-max-width: 1200px;
+  --grid-gap: 16px;
+}
+
+/* ======= Dark Theme ======= */
+[data-theme="dark"] {
+  --md-sys-color-primary: #D0BCFF;
+  --md-sys-color-on-primary: #381E72;
+  --md-sys-color-primary-container: #4F378B;
+  --md-sys-color-on-primary-container: #EADDFF;
+
+  --md-sys-color-secondary: #CCC2DC;
+  --md-sys-color-on-secondary: #332D41;
+  --md-sys-color-secondary-container: #4A4458;
+  --md-sys-color-on-secondary-container: #E8DEF8;
+
+  --md-sys-color-tertiary: #EFB8C8;
+  --md-sys-color-on-tertiary: #492532;
+  --md-sys-color-tertiary-container: #633B48;
+  --md-sys-color-on-tertiary-container: #FFD8E4;
+
+  --md-sys-color-error: #F2B8B5;
+  --md-sys-color-on-error: #601410;
+  --md-sys-color-error-container: #8C1D18;
+  --md-sys-color-on-error-container: #F9DEDC;
+
+  --md-sys-color-background: #1C1B1F;
+  --md-sys-color-on-background: #E6E1E5;
+  --md-sys-color-surface: #1C1B1F;
+  --md-sys-color-on-surface: #E6E1E5;
+  --md-sys-color-surface-variant: #49454F;
+  --md-sys-color-on-surface-variant: #CAC4D0;
+
+  --md-sys-color-outline: #938F99;
+  --md-sys-color-outline-variant: #49454F;
+
+  --md-sys-elevation-level1: 0 1px 3px rgba(0,0,0,.3), 0 1px 2px rgba(0,0,0,.24);
+  --md-sys-elevation-level2: 0 2px 6px rgba(0,0,0,.36), 0 1px 3px rgba(0,0,0,.28);
+  --md-sys-elevation-level3: 0 4px 12px rgba(0,0,0,.42), 0 2px 5px rgba(0,0,0,.3);
+  --md-sys-elevation-level4: 0 6px 20px rgba(0,0,0,.48), 0 3px 7px rgba(0,0,0,.36);
+}
+
+/* ======= Reset & Base ======= */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{
+  font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:var(--md-sys-color-background);
+  color:var(--md-sys-color-on-background);
+  min-height:100vh;
+  line-height:1.5;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* ======= Top App Bar (M3) ======= */
+.top-app-bar{
+  position:sticky;top:0;z-index:100;
+  height:var(--top-bar-height);
+  background:var(--md-sys-color-surface);
+  border-bottom:1px solid var(--md-sys-color-outline-variant);
+  display:flex;
+  align-items:center;
+  padding:0 24px;
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+}
+.top-app-bar .leading-icon{
+  display:flex;align-items:center;justify-content:center;
+  width:40px;height:40px;
+  border-radius:var(--md-sys-shape-full);
+  background:var(--md-sys-color-primary-container);
+  color:var(--md-sys-color-on-primary-container);
+  margin-right:16px;
+  flex-shrink:0;
+  user-select:none;
+}
+.top-app-bar .leading-icon .material-symbols-rounded{
+  font-size:24px;
+  font-variation-settings:'FILL'1,'wght'400;
+}
+.top-app-bar .headline{
+  font-size:22px;
+  font-weight:600;
+  color:var(--md-sys-color-on-surface);
+  flex:1;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.top-app-bar .trailing-area{
+  display:flex;align-items:center;gap:8px;
+}
+.m3-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  height:32px;padding:0 12px;
+  border-radius:var(--md-sys-shape-full);
+  background:var(--md-sys-color-surface-variant);
+  color:var(--md-sys-color-on-surface-variant);
+  font-size:13px;
+  font-weight:500;
+}
+.m3-badge .material-symbols-rounded{
+  font-size:16px;
+  font-variation-settings:'FILL'0,'wght'500;
+}
+.m3-badge .count{
+  font-weight:600;
+  color:var(--md-sys-color-primary);
+}
+[data-theme="dark"] .m3-badge .count{color:var(--md-sys-color-primary);}
+
+/* Theme toggle */
+.theme-btn{
+  display:flex;align-items:center;justify-content:center;
+  width:40px;height:40px;
+  border:none;border-radius:var(--md-sys-shape-full);
+  background:transparent;
+  color:var(--md-sys-color-on-surface-variant);
+  cursor:pointer;
+  transition:background var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
+}
+.theme-btn:hover{background:var(--md-sys-color-surface-variant);}
+.theme-btn .material-symbols-rounded{
+  font-size:22px;
+  font-variation-settings:'FILL'0,'wght'400;
+}
+
+/* ======= Content Area ======= */
+.content{
+  max-width:var(--content-max-width);
+  margin:0 auto;
+  padding:20px 24px 80px;
+}
+
+/* ======= M3 Text Field with Leading Icon ======= */
+.search-field{
+  position:relative;
+  margin-bottom:20px;
+}
+.search-field .m3-input{
+  width:100%;
+  height:56px;
+  padding:16px 56px 16px 56px;
+  border:1px solid var(--md-sys-color-outline);
+  border-radius:var(--md-sys-shape-large);
+  background:var(--md-sys-color-surface);
+  color:var(--md-sys-color-on-surface);
+  font-family:inherit;
+  font-size:16px;
+  outline:none;
+  transition:border-color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized),
+              box-shadow var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
+}
+.search-field .m3-input::placeholder{color:var(--md-sys-color-on-surface-variant);}
+.search-field .m3-input:focus{
+  border-color:var(--md-sys-color-primary);
+  box-shadow:inset 0 0 0 1px var(--md-sys-color-primary);
+}
+.search-field .leading-icon{
+  position:absolute;
+  left:16px;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--md-sys-color-on-surface-variant);
+  pointer-events:none;
+  display:flex;
+}
+.search-field .leading-icon .material-symbols-rounded{
+  font-size:24px;
+  font-variation-settings:'FILL'0,'wght'400;
+}
+.search-field .trailing-icon{
+  position:absolute;
+  right:16px;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--md-sys-color-on-surface-variant);
+  cursor:pointer;
+  display:flex;
+  border:none;background:none;padding:4px;
+  border-radius:var(--md-sys-shape-full);
+  transition:opacity var(--md-sys-motion-duration-short) ease;
+  opacity:0;
+  visibility:hidden;
+}
+.search-field .trailing-icon.visible{
+  opacity:1;
+  visibility:visible;
+}
+.search-field .trailing-icon:hover{background:var(--md-sys-color-surface-variant);}
+.search-field .trailing-icon .material-symbols-rounded{
+  font-size:20px;
+  font-variation-settings:'FILL'0,'wght'400;
+}
+
+/* ======= Filter Row: Diff Buttons (M3 Filter Chips) ======= */
+.filter-row{
+  display:flex;
+  gap:8px;
+  margin-bottom:24px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.m3-chip{
+  display:inline-flex;align-items:center;
+  height:40px;padding:0 16px;
+  border-radius:var(--md-sys-shape-small);
+  border:1px solid var(--md-sys-color-outline);
+  background:transparent;
+  color:var(--md-sys-color-on-surface-variant);
+  font-family:inherit;
+  font-size:14px;
+  font-weight:500;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:all var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+}
+.m3-chip:hover{
+  background:color-mix(in srgb, var(--md-sys-color-on-surface) 8%, transparent);
+}
+.m3-chip.active{
+  background:var(--md-sys-color-secondary-container);
+  border-color:var(--md-sys-color-secondary-container);
+  color:var(--md-sys-color-on-secondary-container);
+}
+.m3-chip .chip-icon{
+  display:flex;margin-right:6px;
+}
+.m3-chip .chip-icon .material-symbols-rounded{
+  font-size:16px;
+  font-variation-settings:'FILL'0,'wght'500;
+}
+
+/* ======= M3 Tabs (Segmented-like, scrollable) ======= */
+.tab-bar{
+  display:flex;
+  gap:12px;
+  margin-bottom:24px;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  padding-bottom:4px;
+}
+.tab-bar::-webkit-scrollbar{display:none}
+.m3-tab{
+  display:inline-flex;align-items:center;gap:8px;
+  height:40px;padding:0 20px;
+  border-radius:var(--md-sys-shape-extra-large);
+  border:1px solid var(--md-sys-color-outline-variant);
+  background:transparent;
+  color:var(--md-sys-color-on-surface-variant);
+  font-family:inherit;
+  font-size:14px;
+  font-weight:500;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:all var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+  flex-shrink:0;
+}
+.m3-tab:hover{
+  background:color-mix(in srgb, var(--md-sys-color-on-surface) 6%, transparent);
+}
+.m3-tab.active{
+  background:var(--md-sys-color-primary-container);
+  border-color:var(--md-sys-color-primary-container);
+  color:var(--md-sys-color-on-primary-container);
+}
+.m3-tab .dot{
+  display:inline-block;
+  width:10px;height:10px;
+  border-radius:var(--md-sys-shape-full);
+  flex-shrink:0;
+  transition:transform var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
+}
+.m3-tab.active .dot{transform:scale(1.15);}
+
+/* ======= Book Grid ======= */
+.book-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(360px,1fr));
+  gap:var(--grid-gap);
+}
+
+/* ======= M3 Elevated Card ======= */
+.m3-card{
+  background:var(--md-sys-color-surface);
+  border:1px solid var(--md-sys-color-outline-variant);
+  border-radius:var(--md-sys-shape-medium);
+  box-shadow:var(--md-sys-elevation-level1);
+  padding:24px 20px 20px;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+  transition:box-shadow var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized),
+              transform var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized),
+              border-color var(--md-sys-motion-duration-short) ease;
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+  animation:fadeSlideUp var(--md-sys-motion-duration-long) var(--md-sys-motion-easing-emphasized) both;
+}
+.m3-card:hover{
+  box-shadow:var(--md-sys-elevation-level2);
+  transform:translateY(-2px);
+  border-color:var(--md-sys-color-outline);
+}
+.m3-card:active{
+  box-shadow:var(--md-sys-elevation-level1);
+  transform:translateY(0);
+}
+
+/* Bookmark button (M3 Icon Button) */
+.m3-card .bookmark-btn{
+  position:absolute;
+  top:12px;right:12px;
+  width:36px;height:36px;
+  border-radius:var(--md-sys-shape-full);
+  border:1px solid var(--md-sys-color-outline-variant);
+  background:var(--md-sys-color-surface);
+  color:var(--md-sys-color-on-surface-variant);
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  z-index:3;
+  transition:all var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
+}
+.m3-card .bookmark-btn:hover{
+  background:var(--md-sys-color-surface-variant);
+  box-shadow:var(--md-sys-elevation-level1);
+}
+.m3-card .bookmark-btn.active{
+  background:var(--md-sys-color-tertiary-container);
+  border-color:var(--md-sys-color-tertiary);
+  color:var(--md-sys-color-tertiary);
+  box-shadow:var(--md-sys-elevation-level1);
+}
+.m3-card .bookmark-btn .material-symbols-rounded{
+  font-size:20px;
+  font-variation-settings:'FILL'0,'wght'400;
+}
+.m3-card .bookmark-btn.active .material-symbols-rounded{
+  font-variation-settings:'FILL'1,'wght'500;
+}
+.bookmark-toast{
+  position:absolute;top:12px;right:54px;
+  font-size:11px;color:var(--md-sys-color-tertiary);
+  background:var(--md-sys-color-tertiary-container);
+  padding:2px 8px;border-radius:var(--md-sys-shape-extra-small);
+  opacity:0;z-index:4;
+  transition:opacity var(--md-sys-motion-duration-short) ease;
+  pointer-events:none;
+  white-space:nowrap;
+}
+.bookmark-toast.show{opacity:1;}
+
+/* Card title */
+.m3-card .card-title{
+  font-size:17px;
+  font-weight:600;
+  color:var(--md-sys-color-on-surface);
+  line-height:1.4;
+  margin-bottom:4px;
+  padding-right:40px;
+}
+.m3-card .card-author{
+  font-size:14px;
+  color:var(--md-sys-color-on-surface-variant);
+  margin-bottom:10px;
+}
+.m3-card .card-chips{
+  display:flex;
+  gap:8px;
+  margin-bottom:12px;
+  flex-wrap:wrap;
+}
+.m3-card .m3-label{
+  display:inline-flex;align-items:center;
+  padding:4px 12px;
+  border-radius:var(--md-sys-shape-small);
+  font-size:12px;
+  font-weight:600;
+  line-height:1;
+}
+.m3-card .m3-label .material-symbols-rounded{
+  font-size:12px;
+  margin-right:4px;
+}
+.m3-card .card-summary{
+  font-size:14px;
+  color:var(--md-sys-color-on-surface-variant);
+  line-height:1.7;
+  margin-bottom:14px;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.m3-card .card-actions{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+
+/* M3 Text Button */
+.m3-text-btn{
+  display:inline-flex;align-items:center;gap:4px;
+  height:32px;padding:0 10px;
+  border:none;border-radius:var(--md-sys-shape-full);
+  background:color-mix(in srgb, var(--md-sys-color-primary) 8%, transparent);
+  color:var(--md-sys-color-primary);
+  font-family:inherit;
+  font-size:12px;
+  font-weight:500;
+  text-decoration:none;
+  cursor:pointer;
+  transition:background var(--md-sys-motion-duration-short) ease;
+}
+.m3-text-btn:hover{
+  background:color-mix(in srgb, var(--md-sys-color-primary) 16%, transparent);
+}
+.m3-text-btn .material-symbols-rounded{
+  font-size:14px;
+  font-variation-settings:'FILL'0,'wght'500;
+}
+
+/* ======= Expandable Detail Section ======= */
+
+
+
+
+
+.detail-section{margin-bottom:16px}
+.detail-label{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+  color:var(--md-sys-color-primary);
+  margin-bottom:6px;
+  display:flex;align-items:center;gap:4px;
+}
+.detail-label .material-symbols-rounded{
+  font-size:14px;
+}
+.detail-content{
+  font-size:14px;
+  color:var(--md-sys-color-on-surface-variant);
+  line-height:1.8;
+}
+
+.detail-takeaway{
+  padding:12px 16px;
+  margin-bottom:10px;
+  background:var(--md-sys-color-surface-variant);
+  border-radius:var(--md-sys-shape-small);
+  border-left:4px solid var(--md-sys-color-primary);
+  transition:background var(--md-sys-motion-duration-short) ease;
+}
+.detail-takeaway .takeaway-num{
+  font-size:11px;
+  font-weight:600;
+  color:var(--md-sys-color-primary);
+  margin-bottom:2px;
+}
+.detail-takeaway .takeaway-text{
+  font-size:14px;
+  color:var(--md-sys-color-on-surface);
+  line-height:1.7;
+}
+
+.detail-loading{
+  text-align:center;
+  padding:24px;
+  color:var(--md-sys-color-on-surface-variant);
+  font-size:14px;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+}
+.detail-loading .m3-spinner{
+  width:20px;height:20px;
+  border:2px solid var(--md-sys-color-outline-variant);
+  border-top-color:var(--md-sys-color-primary);
+  border-radius:50%;
+  animation:m3-spin .6s linear infinite;
+}
+@keyframes m3-spin{to{transform:rotate(360deg)}}
+
+/* ======= Empty State ======= */
+.empty-state{
+  grid-column:1/-1;
+  text-align:center;
+  padding:80px 20px;
+  color:var(--md-sys-color-on-surface-variant);
+}
+.empty-state .empty-icon{
+  font-size:64px;
+  margin-bottom:16px;
+  opacity:.4;
+}
+.empty-state .empty-title{
+  font-size:18px;
+  font-weight:500;
+  color:var(--md-sys-color-on-surface);
+  margin-bottom:8px;
+}
+.empty-state .empty-sub{
+  font-size:14px;
+  color:var(--md-sys-color-on-surface-variant);
+}
+
+/* ======= Footer ======= */
+.footer{
+  text-align:center;
+  padding:24px 24px 48px;
+  color:var(--md-sys-color-on-surface-variant);
+  font-size:12px;
+  line-height:1.8;
+  opacity:.7;
+}
+.footer span{display:block}
+
+/* ======= Animations ======= */
+@keyframes fadeSlideUp{
+  from{opacity:0;transform:translateY(16px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ======= Responsive ======= */
+@media(max-width:840px){
+  .book-grid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+}
+@media(max-width:600px){
+  .top-app-bar{padding:0 16px}
+  .top-app-bar .headline{font-size:20px}
+  .top-app-bar .leading-icon{width:36px;height:36px;margin-right:12px}
+  .top-app-bar .leading-icon .material-symbols-rounded{font-size:20px}
+  .content{padding:16px 16px 60px}
+  .search-field .m3-input{height:48px;padding:12px 48px 12px 48px;font-size:15px}
+  .book-grid{grid-template-columns:1fr;gap:12px}
+  .m3-card{padding:20px 16px 16px}
+  .m3-card .card-title{font-size:16px}
+  .filter-row{gap:6px;margin-bottom:18px}
+  .m3-chip{height:36px;padding:0 14px;font-size:13px}
+  .tab-bar{gap:8px;margin-bottom:18px}
+  .m3-tab{height:36px;padding:0 16px;font-size:13px}
+}
+
+/* ======= Safe area for iPhone ======= */
+@supports(padding-top:env(safe-area-inset-top)){
+  .top-app-bar{
+    padding-top:env(safe-area-inset-top);
+    height:calc(var(--top-bar-height) + env(safe-area-inset-top));
+  }
+}
+@supports(padding-bottom:env(safe-area-inset-bottom)){
+  .footer{padding-bottom:calc(48px + env(safe-area-inset-bottom))}
+  .content{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+}
+
+/* ======= M3 Modal (Dialog) ======= */
+.m3-modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:1000;display:flex;align-items:flex-start;justify-content:center;padding:48px 16px;overflow-y:auto;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s}
+.m3-modal-overlay.open{opacity:1;visibility:visible}
+.m3-modal{background:var(--md-sys-color-surface,var(--md-sys-color-surface-container-high,#211F26));border-radius:28px;max-width:680px;width:100%;max-height:80vh;display:flex;flex-direction:column;box-shadow:0 8px 30px rgba(0,0,0,0.3);transform:translateY(20px) scale(0.95);transition:transform 0.3s cubic-bezier(0.2,0,0,1)}
+.m3-modal-overlay.open .m3-modal{transform:translateY(0) scale(1)}
+.m3-modal-header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px 0;position:sticky;top:0;z-index:1}
+.m3-modal-title{font-size:20px;font-weight:600;color:var(--md-sys-color-on-surface,#E6E0E9);padding-right:40px}
+.m3-modal-close{width:40px;height:40px;border-radius:20px;border:none;background:var(--md-sys-color-surface-variant,#49454F);color:var(--md-sys-color-on-surface-variant,#CAC4D0);cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.2s};cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s}
+.m3-modal-close:hover{background:var(--md-sys-color-secondary-container,#4A4458);color:var(--md-sys-color-on-surface,#E6E0E9)}
+.m3-modal-body{padding:12px 28px 28px}.m3-modal-body .detail-label{color:var(--md-sys-color-primary,#D0BCFF);font-size:15px;font-weight:600;letter-spacing:0.3px;margin-bottom:12px}.m3-modal-body .detail-section{margin-bottom:28px}.m3-modal-body .detail-content{color:var(--md-sys-color-on-surface,#E6E0E9);font-size:16px;line-height:1.85;text-align:justify}.m3-modal-body .takeaway-text{color:var(--md-sys-color-on-surface,#E6E0E9);font-size:15px;line-height:1.8;text-align:justify}.m3-modal-body .takeaway-num{color:var(--md-sys-color-primary,#D0BCFF);font-size:13px;font-weight:600;margin-bottom:4px}.m3-modal-body .detail-takeaway{padding:16px 18px;background:var(--md-sys-color-primary-container,#4A3060);border-radius:16px;margin-bottom:12px;border-left:4px solid var(--md-sys-color-primary,#D0BCFF)}.m3-modal-body .detail-takeaway .takeaway-num{color:var(--md-sys-color-primary,#D0BCFF)}.m3-modal-body .detail-takeaway .takeaway-text{color:var(--md-sys-color-on-primary-container,#FFFFFF)}.m3-modal-body{padding:16px 24px 24px;overflow-y:auto;flex:1}
+@media(max-width:600px){.m3-modal-overlay{padding:0;align-items:flex-end}.m3-modal{border-radius:28px 28px 0 0;max-height:85vh;max-width:100%;width:100%}.m3-modal-header{padding:16px 20px 0}.m3-modal-body{padding:12px 20px 20px}}
+
+</style>
+</head>
+<body>
+
+<!-- ======= Top App Bar (M3) ======= -->
+<header class="top-app-bar" role="banner">
+  <div class="leading-icon" aria-hidden="true">
+    <span class="material-symbols-rounded">menu_book</span>
+  </div>
+  <div class="headline">Keith 書單</div>
+  <div class="trailing-area">
+    <span class="m3-badge">
+      <span class="material-symbols-rounded">library_books</span>
+      <span class="count" id="totalCount">47</span>
+    </span>
+    <span class="m3-badge">
+      <span class="material-symbols-rounded">bookmark</span>
+      <span class="count" id="bookmarkCount">0</span>
+    </span>
+    <button class="theme-btn" id="themeToggle" aria-label="切換主題">
+      <span class="material-symbols-rounded">dark_mode</span>
+    </button>
+  </div>
+</header>
+
+<!-- ======= Main Content ======= -->
+<main class="content" role="main">
+
+  <!-- M3 Search Field -->
+  <div class="search-field" role="search">
+    <span class="leading-icon"><span class="material-symbols-rounded">search</span></span>
+    <input type="text" class="m3-input" id="searchInput"
+           placeholder="搜尋書名或作者…"
+           autocomplete="off"
+           autocorrect="off"
+           autocapitalize="off"
+           spellcheck="false">
+    <button class="trailing-icon" id="searchClear" aria-label="清除搜尋">
+      <span class="material-symbols-rounded">close</span>
+    </button>
+  </div>
+
+  <!-- Difficulty Filter Chips -->
+  <div class="filter-row" id="difficultyFilter" role="group" aria-label="難度篩選">
+    <button class="m3-chip active" data-diff="">
+      <span class="chip-icon"><span class="material-symbols-rounded">tune</span></span>
+      全部難度
+    </button>
+    <button class="m3-chip" data-diff="入門">入門</button>
+    <button class="m3-chip" data-diff="中階">中階</button>
+    <button class="m3-chip" data-diff="進階">進階</button>
+  </div>
+
+  <!-- Category Tabs -->
+  <div class="tab-bar" id="categoryTabs" role="tablist"></div>
+
+  <!-- Book Grid -->
+  <div class="book-grid" id="bookGrid" role="list"></div>
+
+</main>
+
+<!-- ======= Footer ======= -->
+<footer class="footer" role="contentinfo">
+  <span>最後更新：10/06/2026 16:23:02</span>
+  <span>v3.0.0 · Material Design 3</span>
+</footer>
+
+<script>
+// ======= Data =======
+var BOOKS=[
+{id:"FIN-01",title:"富爸爸·窮爸爸",author:"Robert Kiyosaki",cat:"金融/投資",diff:"入門",sum:"透過兩位爸爸嘅理財觀念對比，帶出「你唔係為錢工作，而係要錢為你工作」嘅核心思想。教你點樣擺脫「老鼠賽跑」嘅窮人思維，建立資產負債表概念，踏出財務自由第一步。",gr:"https://www.goodreads.com/book/show/69571.Rich_Dad_Poor_Dad",amz:"https://www.amazon.com/Rich-Dad-Poor-Dad-Money-Investing/dp/1612680194",yt:"",wiki:"https://zh.wikipedia.org/wiki/富爸爸·窮爸爸"},
+{id:"FIN-02",title:"漫步華爾街",author:"Burton Malkiel",cat:"金融/投資",diff:"入門",sum:"提出咗經典嘅「隨機漫步理論」——股價短期走勢根本預測唔到，與其花時間選股，不如長期持有低成本指數基金。融合歷史、心理學同經濟學，係散戶嘅投資聖經。",gr:"https://www.goodreads.com/book/show/106651.A_Random_Walk_Down_Wall_Street",amz:"https://www.amazon.com/Random-Walk-Down-Wall-Street/dp/0393358380",yt:"",wiki:"https://zh.wikipedia.org/wiki/漫步華爾街"},
+{id:"FIN-03",title:"智慧型股票投資人",author:"Benjamin Graham",cat:"金融/投資",diff:"中階",sum:"價值投資嘅始祖級教科書，Graham 提出咗「安全邊際」同「市場先生」呢兩個經典概念。教你點樣理性分析股票，唔好被市場情緒牽住走。",gr:"https://www.goodreads.com/book/show/106835.The_Intelligent_Investor",amz:"https://www.amazon.com/Intelligent-Investor-Collins-Business-Essentials/dp/0060555661",yt:"",wiki:"https://zh.wikipedia.org/wiki/智慧型股票投資人"},
+{id:"FIN-04",title:"巴菲特致股東的信",author:"Warren Buffett (Lawrence Cunningham 編)",cat:"金融/投資",diff:"中階",sum:"收集咗巴菲特多年嚟寫畀Berkshire Hathaway股東嘅信，濃縮晒佢嘅投資智慧——從企業估值、管理層質素到市場時機。每一篇都係實戰經驗嘅結晶。",gr:"https://www.goodreads.com/book/show/290442.The_Essays_of_Warren_Buffett",amz:"https://www.amazon.com/Essays-Warren-Buffett-Lessons-Corporate/dp/1611637589",yt:"",wiki:"https://zh.wikipedia.org/wiki/華倫·巴菲特"},
+{id:"FIN-05",title:"原則：生活與工作",author:"Ray Dalio",cat:"金融/投資",diff:"中階",sum:"橋水基金創辦人Ray Dalio分享佢喺金融市場打滾40年提煉出嚟嘅原則。由「激進透明度」到「創意擇優」，呢啲原則唔止for投資，仲可以應用喺人生各層面。",gr:"https://www.goodreads.com/book/show/34536488-principles",amz:"https://www.amazon.com/Principles-Life-Work-Ray-Dalio/dp/1501124021",yt:"",wiki:"https://zh.wikipedia.org/wiki/原則：生活與工作"},
+{id:"FIN-06",title:"窮查理的普通常識",author:"Charlie Munger / Peter Kaufman",cat:"金融/投資",diff:"進階",sum:"巴菲特嘅黃金拍檔Charlie Munger分享佢嘅「多元思維模型」——從心理學、物理學、生物學等學科提取模型嚟做投資決策。核心信息：你需要一個跨學科嘅知識框架。",gr:"https://www.goodreads.com/book/show/944652.Poor_Charlie_s_Almanack",amz:"https://www.amazon.com/Poor-Charlies-Almanack-Charles-Munger/dp/1578645018",yt:"",wiki:"https://zh.wikipedia.org/wiki/查理·芒格"},
+{id:"FIN-07",title:"投資最重要的事",author:"Howard Marks",cat:"金融/投資",diff:"中階",sum:"橡樹資本創辦人Howard Marks寫落嚟嘅投資備忘錄，涵蓋風險管理、市場週期、第二層思考等核心概念。佢話：投資唔係要睇得準，而係要冇錯得咁勁。",gr:"https://www.goodreads.com/book/show/15798684-the-most-important-thing",amz:"https://www.amazon.com/Most-Important-Thing-Uncommon-Professor/dp/0231162841",yt:"",wiki:""},
+{id:"FIN-08",title:"黑天鵝效應",author:"Nassim Nicholas Taleb",cat:"金融/投資",diff:"進階",sum:"探討點解極端、不可預測嘅事件（黑天鵝）主宰咗世界——金融危機、戰爭、科技顛覆。Taleb教你點樣喺不確定性中生存，甚至從混亂中獲利。",gr:"https://www.goodreads.com/book/show/242472.The_Black_Swan",amz:"https://www.amazon.com/Black-Swan-Second-Improbable-Robustness/dp/081297381X",yt:"",wiki:"https://zh.wikipedia.org/wiki/黑天鵝效應"},
+{id:"PSY-01",title:"影響力",author:"Robert Cialdini",cat:"人性/心理",diff:"入門",sum:"揭示咗六大人類順從心理原理——互惠、承諾一致、社會認同、喜好、權威、稀缺。呢啲原理解釋咗點解我哋會喺唔知唔覺之間被人說服。",gr:"https://www.goodreads.com/book/show/28815.Influence",amz:"https://www.amazon.com/Influence-Psychology-Persuasion-Robert-Cialdini/dp/006124189X",yt:"",wiki:"https://zh.wikipedia.org/wiki/影響力_(書)"},
+{id:"PSY-02",title:"思考，快與慢",author:"Daniel Kahneman",cat:"人性/心理",diff:"中階",sum:"諾貝爾經濟學獎得主Kahneman提出咗人類思考嘅兩套系統——快速直覺嘅系統一，同緩慢理性嘅系統二。解釋咗點解我哋成日做錯決策，從投資到日常生活。",gr:"https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow",amz:"https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555",yt:"",wiki:"https://zh.wikipedia.org/wiki/思考，快與慢"},
+{id:"PSY-03",title:"人性的弱點",author:"Dale Carnegie",cat:"人性/心理",diff:"入門",sum:"經典人性指南，教你點樣同人相處、影響別人、贏得友誼。核心就係三個字——同理心。唔好批評、唔好埋怨、真心欣賞人。",gr:"https://www.goodreads.com/book/show/1845.How_to_Win_Friends_and_Influence_People",amz:"https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034",yt:"",wiki:"https://zh.wikipedia.org/wiki/人性的弱點"},
+{id:"PSY-04",title:"怪誕行為學",author:"Dan Ariely",cat:"人性/心理",diff:"入門",sum:"用大量有趣實驗揭示人類非理性嘅行為模式——點解免費嘅嘢會令我哋失控？點解我哋成日高估自己擁有的嘢？點引誘我哋做出錯誤決定？",gr:"https://www.goodreads.com/book/show/1713426.Predictably_Irrational",amz:"https://www.amazon.com/Predictably-Irrational-Revised-Expanded-Decisions/dp/006135323X",yt:"",wiki:"https://zh.wikipedia.org/wiki/怪誕行為學"},
+{id:"PSY-05",title:"烏合之眾：群眾心理研究",author:"Gustave Le Bon",cat:"人性/心理",diff:"中階",sum:"1895年嘅心理學經典，分析群體點樣令個人喪失理性——匿名性、傳染性、易受暗示。理解群體行為，就理解咗社會運動、股災同營銷爆款背後嘅機制。",gr:"https://www.goodreads.com/book/show/10091516-the-crowd",amz:"https://www.amazon.com/Crowd-Study-Popular-Mind-Gustave/dp/0486453979",yt:"",wiki:"https://zh.wikipedia.org/wiki/烏合之眾"},
+{id:"PSY-06",title:"象與騎象人",author:"Jonathan Haidt",cat:"人性/心理",diff:"中階",sum:"用大象（情緒直覺）同騎象人（理性思考）嘅隱喻解釋人類心理。騎象人以為自己控制咗方向，但大象先係真正嘅力量。理解呢個關係，先可以真正改變自己。",gr:"https://www.goodreads.com/book/show/96884.The_Happiness_Hypothesis",amz:"https://www.amazon.com/Happiness-Hypothesis-Finding-Ancient-Philosophy/dp/0465028020",yt:"",wiki:"https://zh.wikipedia.org/wiki/象與騎象人"},
+{id:"GROWTH-01",title:"原子習慣",author:"James Clear",cat:"自我成長/習慣",diff:"入門",sum:"細微嘅習慣改變可以帶嚟巨大嘅人生變化。James Clear提出咗習慣四步法——提示、渴求、回應、獎賞。每日進步1%，一年後你就會進步37倍。",gr:"https://www.goodreads.com/book/show/40121378-atomic-habits",amz:"https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299",yt:"",wiki:"https://zh.wikipedia.org/wiki/原子習慣"},
+{id:"GROWTH-02",title:"與成功有約",author:"Stephen R. Covey",cat:"自我成長/習慣",diff:"入門",sum:"七個高效能習慣：主動積極、以終為始、要事第一、雙贏思維、知彼解己、統合綜效、不斷更新。唔係速成秘籍，而係品格為本嘅人生哲學。",gr:"https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People",amz:"https://www.amazon.com/Habits-Highly-Effective-People-Powerful/dp/1982137274",yt:"",wiki:"https://zh.wikipedia.org/wiki/與成功有約"},
+{id:"GROWTH-03",title:"心流：最優體驗心理學",author:"Mihaly Csikszentmihalyi",cat:"自我成長/習慣",diff:"中階",sum:"心流係指完全沉浸喺一件事當中、忘卻時間嘅狀態。作者透過研究藝術家、運動員、科學家發現，心流係人類最快樂嘅時刻。教你點樣刻意創造心流。",gr:"https://www.goodreads.com/book/show/66354.Flow",amz:"https://www.amazon.com/Flow-Psychology-Experience-Perennial-Classics/dp/0061339202",yt:"",wiki:"https://zh.wikipedia.org/wiki/心流_(心理學)"},
+{id:"GROWTH-04",title:"刻意練習",author:"Anders Ericsson",cat:"自我成長/習慣",diff:"中階",sum:"天才唔係天生嘅，係練出嚟嘅。Ericsson研究咗各個領域嘅頂尖人物，發現佢哋嘅共通點係「刻意練習」——有目標、有反饋、跳出舒適圈嘅練習。",gr:"https://www.goodreads.com/book/show/26312997-peak",amz:"https://www.amazon.com/Peak-Secrets-New-Science-Expertise/dp/0544947223",yt:"",wiki:"https://zh.wikipedia.org/wiki/刻意練習"},
+{id:"GROWTH-05",title:"成長心態",author:"Carol S. Dweck",cat:"自我成長/習慣",diff:"入門",sum:"固定型心態 VS 成長型心態——前者認為能力天生不變，後者相信可以透過努力成長。呢種心態差異決定咗一個人嘅成就高度。",gr:"https://www.goodreads.com/book/show/40745.Mindset",amz:"https://www.amazon.com/Mindset-Psychology-Carol-S-Dweck/dp/0345472322",yt:"",wiki:"https://zh.wikipedia.org/wiki/心態致勝"},
+{id:"GROWTH-06",title:"深度工作",author:"Cal Newport",cat:"自我成長/習慣",diff:"中階",sum:"喺呢個充滿干擾嘅世界，深度工作（無間斷嘅專注狀態）變成咗最稀缺嘅技能。Newport教你點樣設計工作習慣，進入深度專注，產生高質量產出。",gr:"https://www.goodreads.com/book/show/25744928-deep-work",amz:"https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692",yt:"",wiki:"https://zh.wikipedia.org/wiki/深度工作"},
+{id:"GROWTH-07",title:"為什麼我們這樣生活，那樣工作？",author:"Charles Duhigg",cat:"自我成長/習慣",diff:"入門",sum:"揭開習慣運作嘅神經科學機制——提示、慣例行為、獎勵嘅「習慣迴路」。無論係個人改掉壞習慣，定係企業改變文化，都可以運用呢個框架。",gr:"https://www.goodreads.com/book/show/12609433-the-power-of-habit",amz:"https://www.amazon.com/Power-Habit-What-Life-Business/dp/081298160X",yt:"",wiki:"https://zh.wikipedia.org/wiki/習慣的力量"},
+{id:"BIZ-01",title:"從0到1",author:"Peter Thiel",cat:"商業/創業思維",diff:"中階",sum:"PayPal創辦人、Facebook早期投資者Peter Thiel分享創業哲學。核心觀點：真正嘅創新係「從0到1」——做一啲從來冇人做過嘅事，而唔係喺競爭中複製別人。",gr:"https://www.goodreads.com/book/show/18050143-zero-to-one",amz:"https://www.amazon.com/Zero-One-Notes-Startups-Future/dp/0804139296",yt:"",wiki:"https://zh.wikipedia.org/wiki/從0到1"},
+{id:"BIZ-02",title:"創新者的窘境",author:"Clayton Christensen",cat:"商業/創業思維",diff:"中階",sum:"解釋咗點解大公司會被初創公司顛覆——唔係因為管理不善，而係因為佢哋太聽現有客戶嘅話。破壞性創新嘅經典理論，改變咗整個商業世界嘅思考方式。",gr:"https://www.goodreads.com/book/show/2615.The_Innovator_s_Dilemma",amz:"https://www.amazon.com/Innovators-Dilemma-Technologies-Management-Innovation/dp/1633691780",yt:"",wiki:"https://zh.wikipedia.org/wiki/創新者的窘境"},
+{id:"BIZ-03",title:"精實創業",author:"Eric Ries",cat:"商業/創業思維",diff:"入門",sum:"提出咗「構建-衡量-學習」迴圈，用MVP（最小可行產品）快速測試市場假設。唔好諗住一次過做完美，要快啲失敗、快啲學習。",gr:"https://www.goodreads.com/book/show/10127019-the-lean-startup",amz:"https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898",yt:"",wiki:"https://zh.wikipedia.org/wiki/精實創業"},
+{id:"BIZ-04",title:"好策略·壞策略",author:"Richard Rumelt",cat:"商業/創業思維",diff:"進階",sum:"拆解咩叫真正嘅策略——診斷問題、制定指導方針、設計連貫行動。壞策略係一堆願景廢話，好策略係清晰嘅問題解決方案。",gr:"https://www.goodreads.com/book/show/11721966-good-strategy-bad-strategy",amz:"https://www.amazon.com/Good-Strategy-Bad-Difference-Matters/dp/0307886239",yt:"",wiki:"https://zh.wikipedia.org/wiki/好策略·壞策略"},
+{id:"BIZ-05",title:"Steve Jobs 賈伯斯傳",author:"Walter Isaacson",cat:"商業/創業思維",diff:"入門",sum:"根據Steve Jobs本人授權嘅傳記，記錄咗佢由車庫創業到改變世界嘅一生。從被趕出自己公司到回歸拯救Apple，充滿跌宕起伏同真實嘅人性。",gr:"https://www.goodreads.com/book/show/11084145-steve-jobs",amz:"https://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537",yt:"",wiki:"https://zh.wikipedia.org/wiki/史蒂夫·喬布斯傳"},
+{id:"BIZ-06",title:"重新定義公司：Google如何運作",author:"Eric Schmidt / Jonathan Rosenberg",cat:"商業/創業思維",diff:"中階",sum:"前Google CEO Eric Schmidt分享Google嘅管理哲學——點樣吸引頂尖人才、建立創新文化、用數據做決策、以使命為本。",gr:"https://www.goodreads.com/book/show/18079753-how-google-works",amz:"https://www.amazon.com/How-Google-Works-Eric-Schmidt/dp/1455582344",yt:"",wiki:"https://zh.wikipedia.org/wiki/重新定义公司"},
+{id:"BIZ-07",title:"高效能人士的執行4紀律",author:"Chris McChesney / Sean Covey / Jim Huling",cat:"商業/創業思維",diff:"中階",sum:"講解點樣將最重要嘅戰略目標變成團隊每日嘅執行——專注最重要目標、追蹤領先指標、記分板、定期問責。解決「知易行難」嘅問題。",gr:"https://www.goodreads.com/book/show/9531744-the-4-disciplines-of-execution",amz:"https://www.amazon.com/Disciplines-Execution-Achieving-Wildly-Important/dp/145162705X",yt:"",wiki:""},
+{id:"BIZ-08",title:"E-Myth 終結混亂",author:"Michael E. Gerber",cat:"商業/創業思維",diff:"入門",sum:"拆穿咗創業最大迷思——「技術好＝生意好。」Gerber話創業者需要做三種人：技術員、管理者同企業家。教你將生意變成可以複製嘅系統。",gr:"https://www.goodreads.com/book/show/81948.The_E_Myth_Revisited",amz:"https://www.amazon.com/Myth-Revisited-Small-Businesses-About/dp/0887307280",yt:"",wiki:"https://zh.wikipedia.org/wiki/E-Myth"},
+{id:"AI-01",title:"人工智能：一種現代方法",author:"Stuart Russell / Peter Norvig",cat:"AI/學習",diff:"進階",sum:"AI領域無可爭議嘅聖經級教科書（第4版，2020年），由UC Berkeley教授Stuart Russell同Google研究總監Peter Norvig合著。全球1,500+大學採用為AI必修教材，覆蓋AI所有核心範疇。",gr:"https://www.goodreads.com/book/show/27543.Artificial_Intelligence",amz:"https://www.amazon.com/Artificial-Intelligence-Modern-Approach-4th/dp/0134610997",yt:"",wiki:"https://zh.wikipedia.org/wiki/人工智能：一种现代方法"},
+{id:"AI-02",title:"深度學習（花書）",author:"Ian Goodfellow / Yoshua Bengio / Aaron Courville",cat:"AI/學習",diff:"進階",sum:"深度學習領域最權威教科書，三位AI重量級人物合著——Ian Goodfellow（GAN發明者）、Yoshua Bengio（圖靈獎得主）、Aaron Courville。全書分三部分。",gr:"https://www.goodreads.com/book/show/20386195-deep-learning",amz:"https://www.amazon.com/Deep-Learning-Adaptive-Computation-Machine/dp/0262035618",yt:"",wiki:"https://zh.wikipedia.org/wiki/深度学习_(书)"},
+{id:"AI-03",title:"Attention Is All You Need（Transformer原論文）",author:"Vaswani et al. (Google)",cat:"AI/學習",diff:"進階",sum:"2017年Google Brain發表嘅NeurIPS論文，被譽為AI史上最重要嘅單篇論文（引用10萬+次）。提出Transformer架構，完全基於注意力機制。",gr:"",amz:"",yt:"https://www.youtube.com/results?search_query=transformer+attention+is+all+you+need+explained",wiki:"https://zh.wikipedia.org/wiki/Transformer"},
+{id:"AI-04",title:"Hands-On Machine Learning",author:"Aurélien Géron",cat:"AI/學習",diff:"中階",sum:"ML實戰界第一暢銷書（Amazon 4.7星），作者前Google工程師。分兩大部分：Scikit-Learn傳統ML同Keras/TensorFlow Deep Learning。",gr:"https://www.goodreads.com/book/show/40363665-hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow",amz:"https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1098125975",yt:"",wiki:""},
+{id:"AI-05",title:"Build a Large Language Model (From Scratch)",author:"Sebastian Raschka",cat:"AI/學習",diff:"中階",sum:"2024年Manning出版，市面上極少數「由零寫LLM」嘅實戰書。由Tokenization到Attention到GPT組裝到Pretraining到Fine-tuning。",gr:"https://www.goodreads.com/book/show/209183777-build-a-large-language-model-from-scratch",amz:"https://www.amazon.com/Build-Large-Language-Model-Scratch/dp/1633437167",yt:"",wiki:""},
+{id:"AI-06",title:"LangChain 入門與實戰",author:"LangChain 官方文檔 & 社群",cat:"AI/學習",diff:"入門",sum:"目前最主流嘅LLM應用開發框架（GitHub 100K+ Stars），覆蓋Models/Prompts/Chains/RAG/Agents/LangGraph。",gr:"",amz:"",yt:"https://www.youtube.com/results?search_query=langchain+tutorial+beginner",wiki:"https://python.langchain.com/docs/tutorials/"},
+{id:"AI-07",title:"n8n 自動化工作流實戰",author:"n8n 官方文檔",cat:"AI/學習",diff:"入門",sum:"開源可視化工作流自動化工具（GitHub 50K+ Stars），配合LiteLLM+MCP係AI Agent Infrastructure嘅黃金搭檔。",gr:"",amz:"",yt:"https://www.youtube.com/results?search_query=n8n+ai+tutorial",wiki:"https://docs.n8n.io/"},
+{id:"AI-08",title:"RAG：檢索增強生成實戰",author:"社群資源 / LLM 文檔",cat:"AI/學習",diff:"中階",sum:"RAG係目前LLM應用落地最主流嘅架構。解決LLM知識截止、幻覺同唔識公司內部資料三大問題。",gr:"",amz:"",yt:"https://www.youtube.com/results?search_query=rag+explained+tutorial",wiki:"https://www.pinecone.io/learn/rag/"},
+{id:"AI-09",title:"LiteLLM 實戰：統一多模型接口",author:"LiteLLM 官方文檔",cat:"AI/學習",diff:"入門",sum:"開源LLM Proxy/統一接口工具（GitHub 15K+ Stars）。支援100+ LLM Provider，Load Balancing/Fallback/Rate Limiting/Spend Tracking。",gr:"",amz:"",yt:"https://www.youtube.com/results?search_query=litellm+tutorial",wiki:"https://docs.litellm.ai/"},
+{id:"AI-10",title:"MCP (Model Context Protocol) 入門",author:"Anthropic 官方",cat:"AI/學習",diff:"入門",sum:"Anthropic喺2024年11月推出嘅開放協議（GitHub 40K+ Stars）。標準化LLM同外部工具/數據源嘅連接，「LLM嘅USB標準」。",gr:"",amz:"",yt:"https://www.youtube.com/results?search_query=mcp+model+context+protocol",wiki:"https://modelcontextprotocol.io/"},
+{id:"KID-01",title:"如何培養孩子的品格",author:"Paul Tough",cat:"親子教養",diff:"入門",sum:"揭示咗決定孩子成功嘅關鍵唔係IQ或考試分數，而係毅力、好奇心、責任感等品格特質。深入探討點樣幫孩子建立「逆境韌性」。",gr:"https://www.goodreads.com/book/show/13033826-how-children-succeed",amz:"https://www.amazon.com/How-Children-Succeed-Curiosity-Character/dp/0544104401",yt:"",wiki:""},
+{id:"KID-02",title:"與孩子對話的66堂說話課",author:"Adele Faber / Elaine Mazlish",cat:"親子教養",diff:"入門",sum:"經典親子溝通聖經，教你點樣同孩子講嘢先會聽、點樣表達感受、點樣代替懲罰。核心：同理心溝通 > 命令式管教。",gr:"https://www.goodreads.com/book/show/769016.How_to_Talk_So_Kids_Will_Listen",amz:"https://www.amazon.com/How-Talk-Kids-Will-Listen/dp/145166388X",yt:"",wiki:"https://zh.wikipedia.org/wiki/如何說話孩子才會聽"},
+{id:"KID-03",title:"成長型思維教養法",author:"Carol S. Dweck",cat:"親子教養",diff:"入門",sum:"將成長心態理論應用喺親子教養——讚賞努力而非天份、擁抱失敗作為學習機會、培養孩子嘅「仲未」思維。",gr:"https://www.goodreads.com/book/show/40745.Mindset",amz:"https://www.amazon.com/Mindset-Psychology-Carol-S-Dweck/dp/0345472322",yt:"",wiki:"https://zh.wikipedia.org/wiki/心態致勝"},
+{id:"KID-04",title:"原子習慣（青少年版）",author:"James Clear",cat:"親子教養",diff:"入門",sum:"原子習慣嘅青少年改編版，用更貼近年輕人嘅例子講解習慣養成——點樣建立好習慣、打斷壞習慣、每日進步1%。",gr:"https://www.goodreads.com/book/show/57116593-atomic-habits-for-teens",amz:"https://www.amazon.com/Atomic-Habits-Teens-James-Clear/dp/0735230978",yt:"",wiki:""},
+{id:"KID-05",title:"遊戲力：陪孩子玩出競爭力",author:"Lawrence J. Cohen",cat:"親子教養",diff:"入門",sum:"用遊戲作為同孩子連結嘅橋樑——透過玩嚟解決行為問題、建立自信、處理情緒。大人以為玩冇用，但其實玩係孩子最好嘅學習方式。",gr:"https://www.goodreads.com/book/show/69089.Playful_Parenting",amz:"https://www.amazon.com/Playful-Parenting-Exciting-Connect-Your/dp/0345475674",yt:"",wiki:""},
+{id:"KID-06",title:"培養七個好習慣（兒童版）",author:"Sean Covey",cat:"親子教養",diff:"入門",sum:"將Stephen Covey嘅《與成功有約》七習慣改編成小朋友版本——主動積極、以終為始、要事第一、雙贏思維等，用動物故事解釋。",gr:"https://www.goodreads.com/book/show/533300.The_7_Habits_of_Happy_Kids",amz:"https://www.amazon.com/Habits-Happy-Kids-Sean-Covey/dp/1416957762",yt:"",wiki:""},
+{id:"KID-07",title:"孩子的金錢教育",author:"Ron Lieber",cat:"親子教養",diff:"入門",sum:"教你點樣同孩子談金錢——零用錢點俾、點樣教儲蓄同捐贈、點樣同孩子解釋「錢從哪裡來」。財商教育從小開始。",gr:"https://www.goodreads.com/book/show/22511572-the-opposite-of-spoiled",amz:"https://www.amazon.com/Opposite-Spoiled-Raising-Grounded-Generous/dp/0062247017",yt:"",wiki:""},
+{id:"KID-08",title:"安靜的孩子也有力量",author:"Susan Cain",cat:"親子教養",diff:"中階",sum:"「安靜」係孩子嘅超能力，唔係缺點。Cain探討點樣支持內向孩子喺外向社會中發揮優勢——深度思考、創造力、同理心。",gr:"https://www.goodreads.com/book/show/40303954-quiet-power",amz:"https://www.amazon.com/Quiet-Power-Success-Introverts-Extroverts/dp/0142429730",yt:"",wiki:"https://zh.wikipedia.org/wiki/安靜，就是力量"}
+,
+{id:"PSY-07",title:"怪誕心理學 (Quirkology)",author:"Richard Wiseman",cat:"人性/心理",diff:"入門",sum:"英國心理學家Richard Wiseman用科學實驗拆解日常生活入面嘅怪誕行為——點解我哋會講大話、點解某啲名比其他人更受歡迎、點解騙子可以呃到人？一本充滿趣味實驗嘅心理學入門。",gr:"https://www.goodreads.com/book/show/213354.Quirkology",amz:"https://www.amazon.com/Quirkology-Curious-Science-Research-Updated/dp/0465023339",yt:"",wiki:"https://en.wikipedia.org/wiki/Quirkology"},
+{id:"PSY-08",title:"幸運的因素 (The Luck Factor)",author:"Richard Wiseman",cat:"人性/心理",diff:"入門",sum:"Richard Wiseman用科學方法研究好運同衰運——訪問超過1,000位自認「好運」同「倒霉」嘅人，發現好運其實有得練。四項原則幫你由倒霉佬變幸運星。",gr:"https://www.goodreads.com/book/show/36421.The_Luck_Factor",amz:"https://www.amazon.com/Luck-Factor-Scientific-Principles-Bring/dp/B08WY5RNFW",yt:"",wiki:"https://en.wikipedia.org/wiki/The_Luck_Factor"}
+];
+
+// ======= Constants =======
+var CAT_COLORS={
+  "金融/投資":"#F0B429",
+  "人性/心理":"#E83E8C",
+  "自我成長/習慣":"#2ECC71",
+  "商業/創業思維":"#3498DB",
+  "AI/學習":"#9B59B6",
+  "親子教養":"#E67E22"
+};
+var DIFF_CLASSES={"入門":"easy","中階":"mid","進階":"hard"};
+var CAT_ORDER=["金融/投資","人性/心理","自我成長/習慣","商業/創業思維","AI/學習","親子教養"];
+
+// ======= State =======
+var activeCat="";
+var activeDiff="";
+var searchQuery="";
+var bookmarks=new Set();
+var loadingSet=new Set();
+var clickLock=false;
+var darkTheme=false;
+
+// Check saved preference
+if(localStorage.getItem("md3-theme")==="dark"){darkTheme=true}
+
+// ======= DOM refs =======
+var gridEl=document.getElementById("bookGrid");
+var tabsEl=document.getElementById("categoryTabs");
+var searchEl=document.getElementById("searchInput");
+var clearBtn=document.getElementById("searchClear");
+var totalEl=document.getElementById("totalCount");
+var bmEl=document.getElementById("bookmarkCount");
+var themeBtn=document.getElementById("themeToggle");
+
+// ======= Apply theme =======
+function applyTheme(){
+  if(darkTheme){
+    document.documentElement.setAttribute("data-theme","dark");
+    themeBtn.querySelector(".material-symbols-rounded").textContent="light_mode";
+  }else{
+    document.documentElement.removeAttribute("data-theme");
+    themeBtn.querySelector(".material-symbols-rounded").textContent="dark_mode";
+  }
+  localStorage.setItem("md3-theme",darkTheme?"dark":"light");
+}
+applyTheme();
+
+// Theme toggle
+themeBtn.addEventListener("click",function(){darkTheme=!darkTheme;applyTheme()});
+
+// ======= Build Tabs =======
+function buildTabs(){
+  var html='<button class="m3-tab active" data-cat="">全部</button>';
+  CAT_ORDER.forEach(function(c){
+    var col=CAT_COLORS[c]||"#888";
+    html+='<button class="m3-tab" data-cat="'+c+'"><span class="dot" style="background:'+col+'"></span>'+c+'</button>';
+  });
+  tabsEl.innerHTML=html;
+  tabsEl.addEventListener("click",function(e){
+    var btn=e.target.closest(".m3-tab");
+    if(!btn)return;
+    tabsEl.querySelectorAll(".m3-tab").forEach(function(b){b.classList.remove("active")});
+    btn.classList.add("active");
+    activeCat=btn.dataset.cat;
+    render();
+  });
+}
+
+// ======= Difficulty filter =======
+document.getElementById("difficultyFilter").addEventListener("click",function(e){
+  var btn=e.target.closest(".m3-chip");
+  if(!btn)return;
+  document.getElementById("difficultyFilter").querySelectorAll(".m3-chip").forEach(function(b){b.classList.remove("active")});
+  btn.classList.add("active");
+  activeDiff=btn.dataset.diff;
+  render();
+});
+
+// ======= Search =======
+searchEl.addEventListener("input",function(){
+  searchQuery=searchEl.value.trim().toLowerCase();
+  if(searchQuery){clearBtn.classList.add("visible")}else{clearBtn.classList.remove("visible")}
+  render();
+});
+clearBtn.addEventListener("click",function(){
+  searchEl.value="";
+  searchQuery="";
+  clearBtn.classList.remove("visible");
+  render();
+  searchEl.focus();
+});
+
+// ======= Filter function =======
+function filterBooks(){
+  return BOOKS.filter(function(b){
+    if(activeCat&&b.cat!==activeCat)return false;
+    if(activeDiff&&b.diff!==activeDiff)return false;
+    if(searchQuery){
+      if(!b.title.toLowerCase().includes(searchQuery)&&!b.author.toLowerCase().includes(searchQuery))return false;
+    }
+    return true;
+  });
+}
+
+// ======= Click handler with debounce =======
+function loadAndShowModal(id){
+  if(loadingSet.has(id))return;
+  loadingSet.add(id);
+  var modalContent=document.getElementById("modalContent");
+  modalContent.innerHTML='<div class="detail-loading"><div class="m3-spinner"></div>載入中…</div>';
+  document.getElementById("bookModal").classList.add("open");
+
+  var x=new XMLHttpRequest();
+  x.open("GET","/api/book?id="+id,true);
+  x.onload=function(){
+    if(x.status===200){
+      var d=JSON.parse(x.responseText);
+      var html='<div class="card-detail-inner">';
+      if(d.overview){
+        html+='<div class="detail-section">';
+        html+='<div class="detail-label"><span class="material-symbols-rounded">book</span>概論</div>';
+        html+='<div class="detail-content">'+d.overview+'</div></div>';
+      }
+      if(d.takeaways&&d.takeaways.length>0){
+        html+='<div class="detail-section">';
+        html+='<div class="detail-label"><span class="material-symbols-rounded">psychology</span>三個學習要點</div>';
+        d.takeaways.forEach(function(t,i){
+          html+='<div class="detail-takeaway">';
+          html+='<div class="takeaway-num">要點 '+(i+1)+'</div>';
+          html+='<div class="takeaway-text">'+t+'</div></div>';
+        });
+        html+='</div>';
+      }
+      html+='<div class="detail-section">';
+      html+='<div class="detail-label"><span class="material-symbols-rounded">star</span>推薦原因</div>';
+      html+='<div class="detail-content">'+d.why+'</div></div>';
+      if(d.yt_ch&&d.yt_ch!=="N/A"){
+        html+='<div class="detail-section">';
+        html+='<div class="detail-label"><span class="material-symbols-rounded">play_circle</span>說書頻道</div>';
+        html+='<div class="detail-content">'+d.yt_ch+'</div></div>';
+      }
+      html+='</div>';
+      modalContent.innerHTML=html;
+      modalContent.dataset.loaded=id;
+    }else{
+      modalContent.innerHTML='<div class="detail-loading">❌ 載入失敗</div>';
+    }
+    loadingSet.delete(id);
+  };
+  x.onerror=function(){
+    modalContent.innerHTML='<div class="detail-loading">❌ 載入失敗</div>';
+    loadingSet.delete(id);
+  };
+  x.send();
+}
+
+function handleCardClick(e){
+  if(clickLock)return;
+  clickLock=true;
+  setTimeout(function(){clickLock=false},350);
+  if(e.target.closest(".bookmark-btn")||e.target.closest("a"))return;
+  var id=e.currentTarget.dataset.id;
+  document.getElementById("modalTitle").textContent=e.currentTarget.querySelector(".card-title").textContent;
+  loadAndShowModal(id);
+}
+
+// ======= Render =======
+function render(){
+  var list=filterBooks();
+  totalEl.textContent=list.length;
+  bmEl.textContent=bookmarks.size;
+
+  if(list.length===0){
+    gridEl.innerHTML='<div class="empty-state">';
+    gridEl.innerHTML+='<div class="empty-icon"><span class="material-symbols-rounded" style="font-size:64px">search_off</span></div>';
+    gridEl.innerHTML+='<div class="empty-title">搵唔到相關嘅書</div>';
+    gridEl.innerHTML+='<div class="empty-sub">試吓用其他關鍵詞或者篩選條件</div></div>';
+    return;
+  }
+
+  var html="";
+  list.forEach(function(b,i){
+    var col=CAT_COLORS[b.cat]||"#888";
+    var diffClass=DIFF_CLASSES[b.diff]||"mid";
+    var bmd=bookmarks.has(b.id);
+    var iconFill=bmd?"1":"0";
+
+    html+='<div class="m3-card" data-id="'+b.id+'" style="animation-delay:'+(i*0.03)+'s">';
+
+    // Bookmark button
+    html+='<button class="bookmark-btn'+(bmd?" active":"")+'" data-id="'+b.id+'" aria-label="'+(bmd?"取消收藏":"收藏")+'">';
+    html+='<span class="material-symbols-rounded">'+ (bmd?"bookmark":"bookmark") +'</span></button>';
+
+    // Bookmark toast
+    html+='<div class="bookmark-toast" data-id="'+b.id+'">'+ (bmd?"已收藏":"") +'</div>';
+
+    // Title + Author
+    html+='<div class="card-title">'+b.title+'</div>';
+    html+='<div class="card-author">'+b.author+'</div>';
+
+    // Category + Difficulty labels
+    html+='<div class="card-chips">';
+    html+='<span class="m3-label" style="background:'+col+'20;color:'+col+'">'+b.cat+'</span>';
+    html+='<span class="m3-label" style="background:var(--md-sys-color-surface-variant);color:var(--md-sys-color-on-surface-variant)">'+b.diff+'</span>';
+    html+='</div>';
+
+    // Summary
+    html+='<div class="card-summary">'+b.sum+'</div>';
+
+    // Action links
+    html+='<div class="card-actions">';
+    if(b.gr)html+='<a class="m3-text-btn" href="'+b.gr+'" target="_blank" rel="noopener"><span class="material-symbols-rounded">book</span>Goodreads</a>';
+    if(b.amz)html+='<a class="m3-text-btn" href="'+b.amz+'" target="_blank" rel="noopener"><span class="material-symbols-rounded">inventory_2</span>Amazon</a>';
+    if(b.wiki)html+='<a class="m3-text-btn" href="'+b.wiki+'" target="_blank" rel="noopener"><span class="material-symbols-rounded">public</span>Wiki</a>';
+    if(b.yt)html+='<a class="m3-text-btn" href="'+b.yt+'" target="_blank" rel="noopener"><span class="material-symbols-rounded">play_circle</span>YouTube</a>';
+    html+='</div>';
+
+    // Detail expandable
+    html+='<div class="card-detail"></div></div>';
+  });
+
+  gridEl.innerHTML=html;
+
+  // Attach card click handlers
+  gridEl.querySelectorAll(".m3-card").forEach(function(c){
+    c.addEventListener("click",handleCardClick);
+  });
+
+  // Attach bookmark handlers
+  gridEl.querySelectorAll(".bookmark-btn").forEach(function(btn){
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      var id=btn.dataset.id;
+      var toast=gridEl.querySelector('.bookmark-toast[data-id="'+id+'"]');
+      if(bookmarks.has(id)){
+        bookmarks.delete(id);
+        btn.classList.remove("active");
+        btn.querySelector(".material-symbols-rounded").textContent="bookmark";
+        toast.textContent="";
+        toast.classList.remove("show");
+      }else{
+        bookmarks.add(id);
+        btn.classList.add("active");
+        btn.querySelector(".material-symbols-rounded").textContent="bookmark";
+        toast.textContent="已收藏 ⭐";
+        toast.classList.add("show");
+        setTimeout(function(){toast.classList.remove("show")},1500);
+      }
+      bmEl.textContent=bookmarks.size;
+    });
+  });
+}
+
+// ======= Init =======
+buildTabs();
+render();
+</script>
+
+<!-- ======= M3 Modal Dialog ======= -->
+<div class="m3-modal-overlay" id="bookModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="m3-modal">
+    <div class="m3-modal-header">
+      <div class="m3-modal-title" id="modalTitle"></div>
+      <button class="m3-modal-close" onclick="document.getElementById('bookModal').classList.remove('open')">
+        <span class="material-symbols-rounded">close</span>
+      </button>
+    </div>
+    <div class="m3-modal-body" id="modalContent">
+      <div class="detail-loading"><div class="m3-spinner"></div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
