@@ -704,17 +704,13 @@ body{
 <button class="burger-btn" id="burgerBtn" onclick="toggleBurger()">&#x2630;</button>
 <div class="burger-overlay" id="burgerOverlay" onclick="closeBurger()"></div>
 <div class="burger-menu" id="burgerMenu">
-  <div class="menu-header">Navigation</div>
   <button class="menu-item" data-mode="books" onclick="switchMode('books')">
-    <span class="menu-icon"></span> 好書分享
+    好書分享
   </button>
   <button class="menu-item active" data-mode="news" onclick="switchMode('news')">
-    <span class="menu-icon"></span> 新聞頻道
+    新聞頻道
   </button>
-  <div class="menu-divider"></div>
-  <div style="padding:14px 20px;font-size:12px;color:var(--fg2)">
-    &#x1F99E; Keithclaw Booksharing
-  </div>
+  
 </div>
 
 
@@ -976,7 +972,6 @@ function switchMode(mode) {
   document.querySelector('.menu-item[data-mode="' + mode + '"]').classList.add('active');
   document.querySelectorAll('.mode-section').forEach(function(s) { s.classList.remove('active'); });
   document.getElementById('mode' + mode.charAt(0).toUpperCase() + mode.slice(1)).classList.add('active');
-  document.getElementById('headlineTitle').textContent = mode === 'news' ? '新聞頻道' : '好書分享';
   closeBurger();
   if (mode === 'news') loadNews();
 }
@@ -1166,8 +1161,7 @@ function render(){
 // ======= Init =======
 buildTabs();
 render();
-document.getElementById('headlineTitle').textContent = currentMode === 'news' ? '新聞頻道' : '好書分享';
-  if (currentMode === 'news') loadNews();
+if (currentMode === 'news') loadNews();
 </script>
 
 <!-- ======= M3 Modal Dialog ======= -->
