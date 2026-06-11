@@ -134,8 +134,11 @@ const server = https.createServer({ pfx, passphrase: PFX_PASS }, (req, res) => {
         source: a.source, time: a.time, cat: a.category,
         source_url: a.source_url, article_url: a.article_url
       }));
+      var now = new Date();
+      var ver = 'v1.' + now.getFullYear().toString().slice(-2) + '.' + String(now.getMonth()+1).padStart(2,'0') + '.' + String(now.getDate()).padStart(2,'0');
+      var lastUpdated = now.toISOString().replace('T',' ').slice(0,19);
       res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-      return res.end(JSON.stringify(list));
+      return res.end(JSON.stringify({ articles: list, meta: { last_updated: lastUpdated, version: ver } }));
     } catch(e) {
       res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
       return res.end(JSON.stringify({ error: 'Failed to load news', detail: e.message }));

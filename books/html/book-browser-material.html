@@ -993,10 +993,14 @@ async function loadNews() {
   var grid = document.getElementById('newsGrid');
   try {
     var r = await fetch('/api/news/list');
-    var list = await r.json();
-    newsData = list;
+    var d = await r.json();
+    newsData = d.articles || d;
     buildNewsTabs();
     renderNews();
+    var footer = document.getElementById('newsFooter');
+    if (d.meta) {
+      footer.innerHTML = d.meta.version + ' &middot; 最後更新：' + d.meta.last_updated;
+    }
   } catch(e) {
     grid.innerHTML = '<div style="text-align:center;padding:40px;color:var(--muted)">Failed to load news</div>';
   }
@@ -1201,6 +1205,7 @@ render();
       <h2 style="font-size:22px;font-weight:700">&#x1F4F0; 新聞頻道</h2>
       <div class="tab-bar" id="newsTabs" role="tablist"></div>
       <div class="news-grid" id="newsGrid"><div class="spinner"></div></div>
+      <div id="newsFooter" style="text-align:center;padding:16px;font-size:12px;color:var(--md-sys-color-on-surface-variant)"></div>
     </div>
   </div>
 
