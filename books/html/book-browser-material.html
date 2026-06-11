@@ -313,24 +313,24 @@ body{
 
 
 /* ======= Burger Menu ======= */
-.burger-btn{position:fixed;top:16px;left:16px;z-index:9998;background:#2a2a4a;border:1px solid var(--md-sys-color-outline-variant);border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--md-sys-color-on-surface);font-size:22px;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.15);border:2px solid var(--md-sys-color-primary)}
+.burger-btn{position:fixed;top:16px;left:16px;z-index:9998;background:var(--md-sys-color-surface);border:2px solid var(--md-sys-color-outline-variant);border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--md-sys-color-on-surface);font-size:22px;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.15)}
 .burger-btn:hover{background:var(--bg2)}
-.burger-menu{position:fixed;top:0;left:-280px;width:260px;height:100vh;background:#1a1a2e;border-right:1px solid #2a2a4a;z-index:9997;transition:left .25s ease;padding:20px 0;box-shadow:2px 0 20px rgba(0,0,0,0.3)}
+.burger-menu{position:fixed;top:0;left:-280px;width:260px;height:100vh;background:var(--md-sys-color-surface);border-right:1px solid var(--md-sys-color-outline-variant);z-index:9997;transition:left .25s ease;padding:20px 0;box-shadow:2px 0 20px rgba(0,0,0,0.3)}
 .burger-menu.open{left:0}
 .burger-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:9996;display:none}
 .burger-overlay.open{display:block}
 .burger-menu .menu-item{display:flex;align-items:center;gap:14px;padding:14px 20px;cursor:pointer;color:var(--md-sys-color-on-surface);font-size:15px;font-weight:500;transition:background .15s;border:none;background:none;width:100%;text-align:left}
-.burger-menu .menu-item:hover{background:#1e1e36}
-.burger-menu .menu-item.active{background:#4A3060;color:#D0BCFF}
+.burger-menu .menu-item:hover{background:var(--md-sys-color-surface-variant)}
+.burger-menu .menu-item.active{background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container)}
 .burger-menu .menu-icon{font-size:22px}
-.burger-menu .menu-divider{height:1px;background:#2a2a4a;margin:12px 20px}
+.burger-menu .menu-divider{height:1px;background:var(--md-sys-color-outline-variant);margin:12px 20px}
 .burger-menu .menu-header{font-size:12px;color:var(--fg2);padding:8px 20px 4px;text-transform:uppercase;letter-spacing:1px}
 /* ======= Mode Sections ======= */
 .mode-section{display:none}
 .mode-section.active{display:block}
 /* ======= News Cards ======= */
 .news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
-.news-card{padding:16px;background:#1e1e36;border:1px solid #2a2a4a;border-radius:16px;cursor:pointer;transition:all .2s}
+.news-card{padding:16px;background:var(--md-sys-color-surface-variant);border:1px solid var(--md-sys-color-outline-variant);border-radius:16px;cursor:pointer;transition:all .2s}
 .news-card:hover{border-color:var(--primary);background:var(--bg)}
 .news-card .nc-source{font-size:11px;color:var(--fg2);margin-bottom:4px}
 .news-card .nc-source .src-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600}
@@ -340,8 +340,8 @@ body{
 /* ======= News Article Modal ======= */
 .news-modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:9999;display:none;align-items:center;justify-content:center}
 .news-modal-overlay.open{display:flex}
-.news-modal{background:#1a1a2e;border-radius:28px;width:90%;max-width:640px;max-height:85vh;overflow-y:auto;box-shadow:0 8px 40px rgba(0,0,0,0.3)}
-.news-modal-head{padding:20px 24px 12px;border-bottom:1px solid #2a2a4a;position:sticky;top:0;background:#1a1a2e;border-radius:28px 28px 0 0}
+.news-modal{background:var(--md-sys-color-surface);border-radius:28px;width:90%;max-width:640px;max-height:85vh;overflow-y:auto;box-shadow:0 8px 40px rgba(0,0,0,0.3)}
+.news-modal-head{padding:20px 24px 12px;border-bottom:1px solid var(--md-sys-color-outline-variant);position:sticky;top:0;background:var(--md-sys-color-surface);border-radius:28px 28px 0 0}
 .news-modal-head h2{font-size:20px;font-weight:600;line-height:1.4;margin-bottom:8px}
 .news-modal-head .nm-meta{font-size:12px;color:var(--fg2);display:flex;gap:12px;flex-wrap:wrap}
 .news-modal-head .nm-meta span{display:inline-flex;align-items:center;gap:4px}
@@ -698,7 +698,7 @@ body{
 @media(max-width:600px){.m3-modal-overlay{padding:0;align-items:flex-end}.m3-modal{border-radius:28px 28px 0 0;max-height:85vh;max-width:100%;width:100%}.m3-modal-header{padding:16px 20px 0}.m3-modal-body{padding:12px 20px 20px}}
 
 </style>
-<style>.burger-btn{background:var(--md-sys-color-primary-container)!important;color:var(--md-sys-color-on-primary-container)!important;border:2px solid var(--md-sys-color-primary)!important;box-shadow:0 2px 12px rgba(0,0,0,0.3)!important}</style></head>
+</head>
 <body>
 <!-- ======= Burger Menu ======= -->
 <button class="burger-btn" id="burgerBtn" onclick="toggleBurger()">&#x2630;</button>
