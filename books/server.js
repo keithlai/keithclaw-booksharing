@@ -61,7 +61,8 @@ const server = https.createServer({ pfx, passphrase: PFX_PASS }, (req, res) => {
   }
 
   // ===== Reverse proxy: viewer API routes → localhost:3000 =====
-  if (pathname.startsWith('/api/gateway/') ||
+  if (pathname.startsWith('/api/auth/') ||
+      pathname.startsWith('/api/gateway/') ||
       pathname.startsWith('/api/logs') ||
       pathname.startsWith('/api/system/') ||
       pathname.startsWith('/api/openclaw/') ||
