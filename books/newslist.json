@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "龍蝦書柈 — 新聞頻道",
+    "description": "香港時事 / 國際時事 / 財經新聞",
+    "created": "2026-06-11",
+    "language": "zh-yue",
+    "total_articles": 5,
+    "categories": [
+      "國際時事",
+      "香港時事",
+      "財經新聞"
+    ]
+  },
+  "news_sources": [
+    {
+      "name": "明報",
+      "type": "香港報紙",
+      "url": "https://www.mingpao.com"
+    },
+    {
+      "name": "南華早報 (SCMP)",
+      "type": "香港英文報紙",
+      "url": "https://www.scmp.com"
+    },
+    {
+      "name": "香港電台 (RTHK)",
+      "type": "公共廣播",
+      "url": "https://news.rthk.hk"
+    },
+    {
+      "name": "端傳媒 (Initium Media)",
+      "type": "香港網媒",
+      "url": "https://theinitium.com"
+    },
+    {
+      "name": "BBC News",
+      "type": "國際新聞",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "name": "Reuters",
+      "type": "國際通訊社",
+      "url": "https://www.reuters.com"
+    },
+    {
+      "name": "Bloomberg",
+      "type": "國際金融新聞",
+      "url": "https://www.bloomberg.com"
+    },
+    {
+      "name": "Financial Times",
+      "type": "國際金融報紙",
+      "url": "https://www.ft.com"
+    },
+    {
+      "name": "Associated Press (AP)",
+      "type": "國際通訊社",
+      "url": "https://apnews.com"
+    },
+    {
+      "name": "信報",
+      "type": "香港財經報紙",
+      "url": "https://www.hkej.com"
+    },
+    {
+      "name": "經濟日報",
+      "type": "香港財經報紙",
+      "url": "https://www.hket.com"
+    },
+    {
+      "name": "The Guardian",
+      "type": "國際報紙",
+      "url": "https://www.theguardian.com"
+    },
+    {
+      "name": "Nikkei Asia",
+      "type": "亞洲財經新聞",
+      "url": "https://asia.nikkei.com"
+    },
+    {
+      "name": "Now 新聞",
+      "type": "香港電視新聞",
+      "url": "https://news.now.com"
+    }
+  ],
+  "articles": [
+    {
+      "id": "INT-01",
+      "title": "聯儲局維持利率不變 暗示今年或減息兩次",
+      "summary": "美國聯邦儲備局宣布維持聯邦基金利率不變，但點陣圖顯示年內或將減息兩次，市場預期最快9月啟動。",
+      "detail": "聯儲局主席鮑威爾表示通脹放緩進展良好，惟需更多數據確認才能啟動減息週期。點陣圖顯示委員對今年底利率中位數預測較3月下調。",
+      "time": "2026-06-11T08:30:00+08:00",
+      "source": "Bloomberg",
+      "source_url": "https://www.bloomberg.com",
+      "article_url": "https://www.bloomberg.com/news/articles/fed-rate-decision",
+      "category": "財經新聞",
+      "takeaways": [
+        "聯儲局維持利率不變係市場預期之內，但點陣圖下調利率預測係鴿派信號。",
+        "減息預期利好風險資產（股市、加密貨幣），美元短期受壓。",
+        "香港金管局跟隨聯儲局維持利率不變，港元拆息短期料平穩。"
+      ]
+    },
+    {
+      "id": "HK-01",
+      "title": "政府公布北部都會區詳細規劃 涉逾萬公頃土地",
+      "summary": "發展局公布北部都會區詳細藍圖，涵蓋新田科技城、洪水橋等區域，預計提供逾50萬個新住宅單位。",
+      "detail": "北部都會區計劃涵蓋元朗、北區及部分屯門土地，將分三期發展。首期聚焦新田科技城及洪水橋現代服務區。",
+      "time": "2026-06-10T14:00:00+08:00",
+      "source": "明報",
+      "source_url": "https://www.mingpao.com",
+      "article_url": "https://www.mingpao.com/news/hk/北部都會區",
+      "category": "香港時事",
+      "takeaways": [
+        "北部都會區係香港未來十年最大型土地發展項目，影響樓市同基建投資。",
+        "新田科技城定位類似深圳南山科技園，將帶動創科產業鏈。",
+        "發展需大量資金，政府發債或成主要融資渠道。"
+      ]
+    },
+    {
+      "id": "INT-02",
+      "title": "中美貿易談判重啟 關稅問題成焦點",
+      "summary": "中美雙方代表在日內瓦舉行新一輪貿易談判，美方要求中國進一步開放市場及加強知識產權保護。",
+      "detail": "此次談判係兩國元首上月會晤後嘅首次高級別經貿對話。中方表示已準備新一輪採購清單。",
+      "time": "2026-06-09T10:15:00+08:00",
+      "source": "Reuters",
+      "source_url": "https://www.reuters.com",
+      "article_url": "https://www.reuters.com/world/china/us-china-trade-talks",
+      "category": "國際時事",
+      "takeaways": [
+        "中美關係緩和利好出口股同人民幣匯率。",
+        "知識產權保護係長期結構性問題，短期難有突破。",
+        "香港作為轉口港，中美貿易走勢直接影響本地出入口數據。"
+      ]
+    },
+    {
+      "id": "HK-02",
+      "title": "立法會三讀通過《穩定網絡安全條例》",
+      "summary": "立法會以大部分贊成票通過網絡安全條例，規管關鍵基礎設施營運者嘅網絡安全責任。",
+      "detail": "條例涵蓋金融、能源、交通等八大關鍵行業，要求營運者建立網絡安全管理制度及通報機制。",
+      "time": "2026-06-08T16:45:00+08:00",
+      "source": "香港電台 (RTHK)",
+      "source_url": "https://news.rthk.hk",
+      "article_url": "https://news.rthk.hk/rthk/ch/component/k2/1748356.htm",
+      "category": "香港時事",
+      "takeaways": [
+        "條例影響所有關鍵基礎設施營運商，合規成本將顯著增加。",
+        "網絡安全人才需求將進一步上升，相關行業前景看俏。",
+        "條例與國際標準（如歐盟NIS2）方向一致，有助提升香港整體網絡韌性。"
+      ]
+    },
+    {
+      "id": "FIN-01",
+      "title": "港股成交突破3000億 北水淨買入創年內新高",
+      "summary": "恒生指數升逾600點，成交額突破3000億港元。滬深港通北水淨買入達280億人民幣，創今年單日新高。",
+      "detail": "科技股領漲，騰訊、美團、小米均升逾5%。市場樂觀情緒受聯儲局減息預期及中美貿易談判重啟帶動。",
+      "time": "2026-06-09T16:10:00+08:00",
+      "source": "經濟日報",
+      "source_url": "https://www.hket.com",
+      "article_url": "https://www.hket.com/article/港股成交破3000億",
+      "category": "財經新聞",
+      "takeaways": [
+        "北水大舉流入反映內地資金對港股估值嘅認可。",
+        "成交突破3000億係市場情緒指標，短期走勢偏樂觀。",
+        "科技股領漲，但要注意高追風險，宜分散配置。"
+      ]
+    }
+  ]
+}
