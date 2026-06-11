@@ -129,9 +129,10 @@ const server = https.createServer({ pfx, passphrase: PFX_PASS }, (req, res) => {
   if (pathname === '/api/news/list') {
     try {
       const data = JSON.parse(fs.readFileSync(NEWS_JSON, 'utf8'));
+      const now = new Date().toISOString();
       const list = data.articles.map(a => ({
         id: a.id, title: a.title, summary: a.summary,
-        source: a.source, time: a.time, cat: a.category,
+        source: a.source, time: a.time || now, cat: a.category,
         source_url: a.source_url, article_url: a.article_url
       }));
       var now = new Date();
@@ -161,7 +162,7 @@ const server = https.createServer({ pfx, passphrase: PFX_PASS }, (req, res) => {
       }
       const detail = {
         id: article.id, title: article.title, summary: article.summary,
-        detail: article.detail || '', time: article.time,
+        detail: article.detail || '', time: article.time || new Date().toISOString(),
         source: article.source, source_url: article.source_url,
         article_url: article.article_url, category: article.category,
         takeaways: article.takeaways || []
