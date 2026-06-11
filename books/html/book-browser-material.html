@@ -705,10 +705,10 @@ body{
 <div class="burger-overlay" id="burgerOverlay" onclick="closeBurger()"></div>
 <div class="burger-menu" id="burgerMenu">
   <div class="menu-header">Navigation</div>
-  <button class="menu-item active" data-mode="books" onclick="switchMode('books')">
+  <button class="menu-item" data-mode="books" onclick="switchMode('books')">
     <span class="menu-icon">&#x1F4DA;</span> Book Sharing
   </button>
-  <button class="menu-item" data-mode="news" onclick="switchMode('news')">
+  <button class="menu-item active" data-mode="news" onclick="switchMode('news')">
     <span class="menu-icon">&#x1F4F0;</span> 新聞頻道
   </button>
   <div class="menu-divider"></div>
@@ -757,7 +757,7 @@ body{
     </button>
   </div>
 
-  <div class="mode-section active" id="modeBooks" style="padding-top:0">
+  <div class="mode-section" id="modeBooks">
   <!-- Difficulty Filter Chips -->
   <div class="filter-row" id="difficultyFilter" role="group" aria-label="難度篩選">
     <button class="m3-chip active" data-diff="">
@@ -963,7 +963,7 @@ function handleCardClick(e){
 }
 
 // ===== Burger Menu & Mode Switching =====
-var currentMode = 'books';
+var currentMode = 'news';
 function toggleBurger() {
   document.getElementById('burgerMenu').classList.toggle('open');
   document.getElementById('burgerOverlay').classList.toggle('open');
@@ -1176,6 +1176,7 @@ function render(){
 // ======= Init =======
 buildTabs();
 render();
+if (currentMode === 'news') loadNews();
 </script>
 
 <!-- ======= M3 Modal Dialog ======= -->
@@ -1195,7 +1196,7 @@ render();
   </div>
 
   <!-- ======= News Mode Section ======= -->
-  <div class="mode-section" id="modeNews">
+  <div class="mode-section active" id="modeNews">
     <div style="padding:0 0 16px">
       <h2 style="font-size:22px;font-weight:700">&#x1F4F0; 新聞頻道</h2>
       <div class="tab-bar" id="newsTabs" role="tablist"></div>
