@@ -1,0 +1,8 @@
+🔑 Loaded PFX certificate
+🔒 HTTPS Book Browser running at:
+   https://localhost:443
+   https://127.0.0.1:443
+   https://172.19.0.6:443  (LAN)
+
+⚠️  Self-signed cert. Browser will warn. Click Advanced → Proceed.
+📌  Stop: taskkill /F /PID 5128
